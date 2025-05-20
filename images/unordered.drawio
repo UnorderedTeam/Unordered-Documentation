@@ -1,62 +1,62 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.4">
   <diagram name="Strona-1" id="UB8W7r6RqSp0z8Qq4e2B">
-    <mxGraphModel dx="2977" dy="1720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1226" dy="1877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <object placeholders="1" c4Name="Użytkownik" c4Type="Person" c4Description="Użytkownik aplikacji mobilnej Unordered" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-2">
-          <mxCell style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1" parent="1">
-            <mxGeometry x="10" y="320" width="200" height="180" as="geometry" />
+          <mxCell style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" parent="1" vertex="1">
+            <mxGeometry x="640" y="-210" width="200" height="180" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Aplikacja mobilna Unordered" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-7">
-          <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="230" y="10" width="980" height="590" as="geometry" />
+          <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+            <mxGeometry x="230" y="10" width="960" height="590" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Firebase" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-11">
-          <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="230" y="600" width="980" height="460" as="geometry" />
+          <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+            <mxGeometry x="230" y="600" width="960" height="460" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Aplikacja mobilna Unordered" c4Type="Container" c4Technology="Flutter, Dart" c4Description="Umożliwia użytkownikom na korzystanie z głównych funkcji aplikacji" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-15">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
             <mxGeometry x="280" y="30" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Baza danych Firestore" c4Type="Container" c4Technology="Firebase, Firestore" c4Description="Przechowuje wszystkie dane dotyczące aplikacji" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-21">
-          <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="1">
-            <mxGeometry x="950" y="889" width="240" height="120" as="geometry" />
+          <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="1" vertex="1">
+            <mxGeometry x="940" y="900" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Utwórz Box Kontroler" c4Type="Component" c4Technology="Node.js, Google Cloud Functions" c4Description="Tworzy nowy box na podstawie odpowiedzi od OpenAI" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-24">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
             <mxGeometry x="570" y="860" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Utwórz Box Cykliczny" c4Type="Component" c4Technology="Dart" c4Description="Pozwala użytkownikom tworzyć boxy dla wcześniej utworzonych profili z dodatkiem cykliczności ustalonej za pomocą kalendarza" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-25">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="950" y="420" width="240" height="120" as="geometry" />
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+            <mxGeometry x="940" y="420" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-25">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-25" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1070" y="90" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-30" value="Tworzy box cykliczny" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-26">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-30" value="Tworzy box cykliczny" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-26" vertex="1" connectable="0">
           <mxGeometry x="-0.1911" y="-1" relative="1" as="geometry">
             <mxPoint x="-5" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
         <object placeholders="1" c4Name="Utwórz Box Losowy" c4Type="Component" c4Technology="Dart" c4Description="Pozwala użytkownikom tworzyć boxy o kompletnie losowej zawartości" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-27">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
             <mxGeometry x="600" y="425" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-27">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-27" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="930" y="60" as="sourcePoint" />
             <mxPoint x="740" y="515" as="targetPoint" />
@@ -66,12 +66,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-31" value="Tworzy box losowy" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-29">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-31" value="Tworzy box losowy" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" parent="ILFe_s9RnPKqGKGF7zHz-29" vertex="1" connectable="0">
           <mxGeometry x="0.5695" relative="1" as="geometry">
             <mxPoint x="-120" y="-100" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-44">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-44" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="340" y="190" />
@@ -79,59 +79,59 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-46" value="Zarządza kontem użytkownika" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-45">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-46" value="Zarządza kontem użytkownika" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-45" vertex="1" connectable="0">
           <mxGeometry x="0.823" y="2" relative="1" as="geometry">
             <mxPoint x="18" y="-129" as="offset" />
           </mxGeometry>
         </mxCell>
         <object placeholders="1" c4Name="Authentication" c4Type="Container" c4Technology="Firebase" c4Description="Zarządza weryfikacją kont użytkowników za pomocą numerów telefonu" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-53">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
             <mxGeometry x="240" y="710" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Funkcje Scheduled" c4Type="Component" c4Technology="Firebase, Node.js, Google Cloud Functions" c4Description="Wykonuje cyklicznie zaplanowane funkcje" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-56">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="950" y="740" width="240" height="120" as="geometry" />
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+            <mxGeometry x="940" y="740" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="OpenAI Kontroler" c4Type="Component" c4Technology="Node.js, Google Cloud Functions, OpenAI" c4Description="Obsługuje zapytania do AI za pomocą OpenAI API i modelu GPT4.1" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-62">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
             <mxGeometry x="600" y="630" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-25" target="ILFe_s9RnPKqGKGF7zHz-62">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-25" target="ILFe_s9RnPKqGKGF7zHz-62" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1070" y="690" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-71" value="Dobiera produkty na&lt;div&gt;podstawie profilu i okazji&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-70">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-71" value="Dobiera produkty na&lt;div&gt;podstawie profilu i okazji&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-70" vertex="1" connectable="0">
           <mxGeometry x="0.359" y="-1" relative="1" as="geometry">
             <mxPoint x="-24" y="9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-62" target="ILFe_s9RnPKqGKGF7zHz-24">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-62" target="ILFe_s9RnPKqGKGF7zHz-24" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-73" value="Ukończ tworzenie&lt;div&gt;nowego boxa&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-72">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-73" value="Ukończ tworzenie&lt;div&gt;nowego boxa&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-72" vertex="1" connectable="0">
           <mxGeometry x="-0.5459" y="-3" relative="1" as="geometry">
             <mxPoint x="28" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-24" target="ILFe_s9RnPKqGKGF7zHz-21">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-24" target="ILFe_s9RnPKqGKGF7zHz-21" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="860" y="919" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-75" value="Zachowaj nowy box" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-74">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-75" value="Zachowaj nowy box" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-74" vertex="1" connectable="0">
           <mxGeometry x="-0.0143" y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-62" target="ILFe_s9RnPKqGKGF7zHz-21">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-62" target="ILFe_s9RnPKqGKGF7zHz-21" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="510" y="720" />
@@ -141,12 +141,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-85" value="Bierze produkty i treść profilów" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-84">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-85" value="Bierze produkty i treść profilów" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-84" vertex="1" connectable="0">
           <mxGeometry x="0.3446" y="3" relative="1" as="geometry">
             <mxPoint x="-56" y="3" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-27" target="ILFe_s9RnPKqGKGF7zHz-62">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-27" target="ILFe_s9RnPKqGKGF7zHz-62" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="860" y="455" as="sourcePoint" />
             <mxPoint x="370" y="960" as="targetPoint" />
@@ -156,70 +156,70 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-87" value="Dobiera produkty losowo" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-86">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-87" value="Dobiera produkty losowo" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-86" vertex="1" connectable="0">
           <mxGeometry x="-0.1493" relative="1" as="geometry">
             <mxPoint x="11" as="offset" />
           </mxGeometry>
         </mxCell>
         <object placeholders="1" c4Name="Zarządzanie kontem" c4Type="Component" c4Technology="Dart" c4Description="Pozwala na rejestrację lub usunięcie konta" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-44">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
             <mxGeometry x="240" y="420" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Utwórz profil" c4Type="Component" c4Technology="Dart" c4Description="Funkcja tworząca nowy profil na podstawie danych wejściowych od użytkownika podanych za pomocą interfejsu" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-8">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
             <mxGeometry x="430" y="280" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Utwórz Box dla Profilu" c4Type="Component" c4Technology="Dart" c4Description="Pozwala użytkownikom tworzyć boxy dla wcześniej utworzonych profili, ustawiając potrzebne parametry za pomocą interfejsu" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="ILFe_s9RnPKqGKGF7zHz-9">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
             <mxGeometry x="770" y="270" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-2" target="ILFe_s9RnPKqGKGF7zHz-15">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-2" target="ILFe_s9RnPKqGKGF7zHz-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-93" value="Tworzy profile, wszystkie rodzaje&lt;br&gt;&lt;div&gt;&quot;boxów&quot; i zarządza kontem za pomocą&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-92">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-93" value="Tworzy profile, wszystkie rodzaje&lt;br&gt;&lt;div&gt;&quot;boxów&quot; i zarządza kontem za pomocą&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-92" vertex="1" connectable="0">
           <mxGeometry x="0.5422" y="-4" relative="1" as="geometry">
-            <mxPoint x="-82" y="116" as="offset" />
+            <mxPoint x="74" y="-21" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-8">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-95" value="Tworzy nowy profil" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-94">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-95" value="Tworzy nowy profil" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-94" vertex="1" connectable="0">
           <mxGeometry x="0.1057" y="4" relative="1" as="geometry">
             <mxPoint x="-4" y="-25" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-9" target="ILFe_s9RnPKqGKGF7zHz-62">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-9" target="ILFe_s9RnPKqGKGF7zHz-62" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-97" value="Dobiera produkty na&lt;div&gt;podstawie profilu i okazji&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-96">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-97" value="Dobiera produkty na&lt;div&gt;podstawie profilu i okazji&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-96" vertex="1" connectable="0">
           <mxGeometry x="-0.0625" y="-1" relative="1" as="geometry">
             <mxPoint x="1" y="30" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-56" target="ILFe_s9RnPKqGKGF7zHz-62">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-56" target="ILFe_s9RnPKqGKGF7zHz-62" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-99" value="Dobiera produkty tematyczne&lt;div&gt;dla &quot;Daily Boxów&quot; raz&lt;/div&gt;&lt;div&gt;na dzień&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-98">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-99" value="Dobiera produkty tematyczne&lt;div&gt;dla &quot;Daily Boxów&quot; raz&lt;/div&gt;&lt;div&gt;na dzień&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-98" vertex="1" connectable="0">
           <mxGeometry x="0.1455" y="-4" relative="1" as="geometry">
             <mxPoint x="46" y="4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-44" target="ILFe_s9RnPKqGKGF7zHz-53">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-44" target="ILFe_s9RnPKqGKGF7zHz-53" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-101" value="Weryfikuje lub usuwa już&lt;div&gt;istniejące konto&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-100">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-101" value="Weryfikuje lub usuwa już&lt;div&gt;istniejące konto&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-100" vertex="1" connectable="0">
           <mxGeometry x="0.119" relative="1" as="geometry">
             <mxPoint y="15" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-9">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="ILFe_s9RnPKqGKGF7zHz-15" target="ILFe_s9RnPKqGKGF7zHz-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ILFe_s9RnPKqGKGF7zHz-103" value="Tworzy box jednorazowy" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ILFe_s9RnPKqGKGF7zHz-102">
+        <mxCell id="ILFe_s9RnPKqGKGF7zHz-103" value="Tworzy box jednorazowy" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ILFe_s9RnPKqGKGF7zHz-102" vertex="1" connectable="0">
           <mxGeometry x="-0.5217" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>

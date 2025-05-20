@@ -6,6 +6,8 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{xcolor}
+\setlength {\marginparwidth }{2cm}
+\usepackage{todonotes}
 
 \title{Dokumentacja aplikacji Unordered}
 \author{Adam Dybcio\endline Łukasz Czapski\endline Igor Ciżewski\endline Denis Jabłoński\endline Mateusz Sztankiewicz}
@@ -20,27 +22,26 @@
 
 \section{Wprowadzenie}
 \subsection{Cel dokumentu}
-opisać cel dokumentu
+Dokumentacja ma na celu przedstawienie architektury oraz funkcjonalności aplikacji Unordered.
+Zawiera również informacje o integracji z OpenAI oraz wdrożeniu aplikacji.
 
 \subsection{Opis aplikacji}
-opisać krótko aplikacje i jej funkcjonalności
-\begin{itemize}
-    \item Tworzenie "boxów prezentów" (zestawów propozycji),
-    \item Konfigurowanie cyklicznych generowań (np. co roku na urodziny),
-    \item Losowanie całkowicie przypadkowych propozycji.
-\end{itemize}
+\todo{Opis aplikacji}
 
 \newpage
 \section{Architektura}
 \subsection{Diagram wysokopoziomowy}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{images/unordered.c4.png}
+    \includegraphics[width=.8\textwidth]{images/unordered.c4.png}
     \caption{Architektura systemu}{Źródło: drawio.com}
     \label{fig:arch}
 \end{figure}
 
+\newpage
+
 \subsection{Frontend (Flutter)}
+\todo{Opis frontendu fluttera i wgl}
 \begin{itemize}
     \item Wersja Flutter: [X.Y.Z]
     \item Główne pakiety: \texttt{firebase\_core}, \texttt{cloud\_functions}, \texttt{http}, etc.
@@ -51,78 +52,97 @@ opisać krótko aplikacje i jej funkcjonalności
 
 \subsection{Backend (Firebase)}
 \begin{itemize}
-    \item Cloud Functions (Node.js)
-    \item Firestore (baza danych)
-    \item Authentication (logowanie)
-    \item Integracja z OpenAI API
+    \item \textbf{Baza danych:} Firestore - przechowuje dane użytkowników, zapisane profile, utworzone boxy, listy produktów i jakiekolwiek inne potrzebne dane do działania aplikacji.
+    \item \textbf{Funkcjonalość:} Cloud Functions (Node.js) - obsługuje główne działania backendu aplikacji, takie jak generowanie boxów, komunikacja i przetwarzanie danych z OpenAI czy pobieranie aktualnej listy produktów.
+    \item \textbf{Uwierzytelnianie:} Firebase Authentication - pozwala użytkownikom na rejestrację i logowanie się do aplikacji za pomocą numeru telefonu, używając weryfikacji SMS.
+    \item \textbf{Automatyzacja:} Cloud Functions Scheduler - służy do cyklicznego uruchamiania funkcji, obsługuje m.in. generowanie ``Daily Boxów'' - codziennych propozycji prezentów o losowych kategoriach.
 \end{itemize}
 
 \newpage
 \section{Funkcjonalności}
-\subsection{Generowanie prezentów}
-\subsubsection{Profil użytkownika}
-Opis pól profilu (np. wiek, zainteresowania, budżet).
+\todo{Pokazać w screenshotach jak to działa albo to zrobić w sekcji frontend}
+\subsection{Generowanie boxów}
 
 \subsubsection{Typy generowania}
 \begin{itemize}
-    \item \textbf{Na teraz} – jednorazowe generowanie dla podanych parametrów
-    \item \textbf{Cykliczne} – konfiguracja powtarzalnych generowań
-    \item \textbf{Losowe} – bez podawania parametrów
+    \item \textbf{Dla profilu} - Generacja boxów na podstawie profilu, który został wcześniej utworzony.
+    Użytkownik podaje budżet oraz okazję, na którą box ma być wygenerowany.
+    \item \textbf{Cykliczny} - Generacja boxów cyklicznych,
+    które będą generowane co określony czas (np. co miesiąc, co rok).
+    Wymagane parametry jak w przypadku boxów ``Dla profilu''.
+    \item \textbf{Losowy} - Generacja losowych propozycji prezentów, bez podawania żadnych parametrów
+    \item \textbf{Manualny} - aktualnie brak implementacji
 \end{itemize}
 
-\subsection{Boxy prezentów}
+\subsubsection{Profil użytkownika}
+Do wygenerowania boxów typu ``Dla profilu'' lub ``Cykliczny'' wymagane jest utworzenie profilu, dla którego dobierane będą propozycje. Dane profilu to:
 \begin{itemize}
-    \item Struktura boxa (nazwa, data, lista propozycji)
-    \item Zapisywanie historii
-    \item Udostępnianie
+    \item \textbf{Nazwa profilu} (np. ``Mama'', ``Tata'', ``Kolega'')
+    \item \textbf{Opis osoby} (Preferencje, zainteresowania, itp.)
+    \item \textbf{Zainteresowania} (Wybór kategorii z gotowej listy)
 \end{itemize}
 
-\newpage
+\subsection{Struktura boxa}
+Struktura boxów jest taka sama dla wszystkich typów generowania. Boxy są przechowywane w bazie danych Firestore i zawierają następujące dane:
+\begin{itemize}
+    \item \textbf{Budżet} (Kwota, którą użytkownik chce przeznaczyć na prezenty)
+    \item \textbf{Data wygenerowania} (Data, kiedy box został wygenerowany)
+    \item \textbf{Czy jest cykliczny} (Wartość boolean, czy box jest cykliczny)
+    \item \textbf{Frekwencja cykliczności} (Użyte tylko dla boxów cyklicznych, np. co miesiąc, co rok)
+    \item \textbf{Okazja} (Okazja, na którą box został wygenerowany, np. urodziny, imieniny)
+    \item \textbf{Planowana data} (Data, na którą box został zaplanowany)
+    \item \textbf{Cena} (Suma cen wszystkich produktów w boxie)
+    \item \textbf{Lista produktów} (Produkty, które zostały wygenerowane w boxie)
+\end{itemize}
+
 \section{Integracja z OpenAI}
+\subsection{Opis API}
+Wybranym do generacji modelem jest \textbf{gpt-o4-mini}.
+Wybór modelu jest uzasadniony
+jego działaniem w trybie ``reasoning'' który pozwala na generacje biorącą pod
+uwagę wszystkie parametry podane przez użytkownika.
+Jest on również tańszym wyborem, w porównaniu do modeli \textbf{gpt-4.1} oraz \textbf{gpt-o3}.
 \subsection{Prompt engineering}
-Opisać prompty, które są używane do generowania prezentów.
-\begin{lstlisting}[language=python]
-"prompt"
-\end{lstlisting}
-
+Przy inżynierii promptów uwaga była skupiona na wykorzystaniu najmniejszej ilości tokenów
+przy zachowaniu jak najlepszej jakości odpowiedzi.
+Strukturą wszystkich promptów jest:
+\textbf{ZASADA}$\rightarrow$\textbf{OPIS ZASADY}
+\begin{itemize}
+    \item \textbf{Generowanie boxów dla profilu} - generacja boxów na podstawie profilu użytkownika.\\\\
+        \textbf{ANALIZA}$\rightarrow$Uwzględnij zainteresowania, okazję (...) \\
+        \textbf{RÓŻNORODNOŚĆ}$\rightarrow$Unikaj powtórzeń, (...) \\
+        \textbf{BUDŻET}$\rightarrow$Nigdy nie przekraczaj budżetu!(...) \\
+        \textbf{ODPOWIEDŹ}$\rightarrow$Zwróć TYLKO JSON array (...) \\
+    \item \textbf{Generowanie ``Daily Boxów''} - generacja boxów o różnych tematach, raz dziennie.\\\\
+        \textbf{DOBÓR}$\rightarrow$Uwzględnij temat, unikaj innych kategorii. (...) \\
+        \textbf{RÓŻNORODNOŚĆ}$\rightarrow$Unikaj powtórzeń,  (...) \\
+        \textbf{BUDŻET}$\rightarrow$Nigdy nie przekraczaj budżetu!  (...) \\
+        \textbf{ODPOWIEDŹ}$\rightarrow$Zwróć TYLKO JSON array  (...) \\
+    \item \textbf{Generowanie losowych boxów} - generacja boxów bez podawania żadnych parametrów.\\\\
+        \textbf{LOSOWOŚĆ}$\rightarrow$Wybierz losowe przedmioty (...) \\
+        \textbf{RÓŻNORODNOŚĆ}$\rightarrow$Dobieraj różne kategorie. \\
+        \textbf{BUDŻET}$\rightarrow$Utrzymaj realistyczny budżet.\\
+        \textbf{ODPOWIEDŹ}$\rightarrow$Zwróć TYLKO JSON array (...) \\
+\end{itemize}
 \subsection{Przetwarzanie odpowiedzi}
-Opis parsowania odpowiedzi API i mapowania na model danych aplikacji.
+Formatem zwróconej odpowiedzi jest JSON array, który zawiera listę samych ID produktów,
+aby zminimalizować ilość tokenów. Następnie ID są sprawdzane oraz przetwarzane przez backend.
 
-\newpage
 \section{Wdrożenie}
 \subsection{Konfiguracja Firebase}
-Instrukcja deploy funkcji cloudowych:
-\begin{lstlisting}[language=bash]
-firebase deploy --only functions
-\end{lstlisting}
-
-\subsection{Środowiska}
-\begin{itemize}
-    \item Development
-    \item Production
-\end{itemize}
-
-\newpage
-\section{Testowanie}
-\subsection{Testy jednostkowe}
-\begin{itemize}
-    \item Flutter (widget tests)
-    \item Cloud Functions (Jest/Mocha)
-\end{itemize}
-
-\subsection{Testy integracyjne}
-Scenariusze testowe dla głównych ścieżek.
+Aby wdrożyć funkcje chmurowe (Cloud Functions) za pomocą Firebase, należy użyć narzędzia \texttt{firebase} dostępnego przez npm, oraz zainicjować projekt i wdrożyć funkcję do projektu Firebase.
+Po wdrożeniu należy upewnić się, że adresy (linki) do nowych funkcji są zgodne zarówno w kodzie backendu (Cloud Functions), jak i w wywołaniach po stronie frontendu Flutter. Spójność nazw i endpointów jest kluczowa dla poprawnej komunikacji między aplikacją a backendem.
 
 \newpage
 \section{Podsumowanie i dalszy rozwój}
+\todo{Zrobić podsumowanie i rozwój}
 \subsection{Znane ograniczenia}
 \begin{itemize}
-    \item Ograniczenia OpenAI (np. długość promptów)
-    \item Limity Firebase
+    \item Ograniczenia, limity związane np z OpenAI, firebase, etc.
 \end{itemize}
 
 \subsection{Roadmap}
-Planowane funkcje (np. integracja z sklepami online).
+Planowane funkcje (np. integracja z sklepami).
 
 \begin{thebibliography}{9}
 \bibitem{flutter}
