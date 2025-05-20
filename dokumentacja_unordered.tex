@@ -1,4 +1,5 @@
 \documentclass[a4paper, 12pt]{article}
+\usepackage[a4paper,margin=1.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[polish]{babel}
@@ -6,8 +7,6 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{xcolor}
-\setlength {\marginparwidth }{2cm}
-\usepackage{todonotes}
 
 \title{Dokumentacja aplikacji Unordered}
 \author{Adam Dybcio\endline Łukasz Czapski\endline Igor Ciżewski\endline Denis Jabłoński\endline Mateusz Sztankiewicz}
@@ -26,22 +25,22 @@ Dokumentacja ma na celu przedstawienie architektury oraz funkcjonalności aplika
 Zawiera również informacje o integracji z OpenAI oraz wdrożeniu aplikacji.
 
 \subsection{Opis aplikacji}
-\todo{Opis aplikacji}
+%%\todo{Opis aplikacji}
 
 \newpage
 \section{Architektura}
 \subsection{Diagram wysokopoziomowy}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=.8\textwidth]{images/unordered.c4.png}
-    \caption{Architektura systemu}{Źródło: drawio.com}
+    \includegraphics[height=0.745\textheight,keepaspectratio]{images/unordered.c4.png}
+    \caption{Architektura systemu}
     \label{fig:arch}
 \end{figure}
 
 \newpage
 
 \subsection{Frontend (Flutter)}
-\todo{Opis frontendu fluttera i wgl}
+%%\todo{Opis frontendu fluttera i wgl}
 \begin{itemize}
     \item Wersja Flutter: [X.Y.Z]
     \item Główne pakiety: \texttt{firebase\_core}, \texttt{cloud\_functions}, \texttt{http}, etc.
@@ -60,7 +59,7 @@ Zawiera również informacje o integracji z OpenAI oraz wdrożeniu aplikacji.
 
 \newpage
 \section{Funkcjonalności}
-\todo{Pokazać w screenshotach jak to działa albo to zrobić w sekcji frontend}
+%%\todo{Pokazać w screenshotach jak to działa albo to zrobić w sekcji frontend}
 \subsection{Generowanie boxów}
 
 \subsubsection{Typy generowania}
@@ -135,7 +134,7 @@ Po wdrożeniu należy upewnić się, że adresy (linki) do nowych funkcji są zg
 
 \newpage
 \section{Podsumowanie i dalszy rozwój}
-\todo{Zrobić podsumowanie i rozwój}
+%%\todo{Zrobić podsumowanie i rozwój}
 \subsection{Znane ograniczenia}
 \begin{itemize}
     \item Ograniczenia, limity związane np z OpenAI, firebase, etc.
