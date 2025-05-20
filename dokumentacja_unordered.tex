@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{float}
 
 \title{Dokumentacja aplikacji Unordered}
 \author{Adam Dybcio\endline Łukasz Czapski\endline Igor Ciżewski\endline Denis Jabłoński\endline Mateusz Sztankiewicz}
@@ -26,15 +27,22 @@ Zawiera również informacje o integracji z OpenAI oraz wdrożeniu aplikacji.
 
 \subsection{Opis aplikacji}
 %%\todo{Opis aplikacji}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth,keepaspectratio]{images/box_desc.png}
+    \caption{Opis generacji boxów dla profilu}
+    \label{fig:box-desc}
+\end{figure}
 
 \newpage
+
 \section{Architektura}
 \subsection{Diagram wysokopoziomowy}
 \begin{figure}[ht]
     \centering
     \includegraphics[height=0.745\textheight,keepaspectratio]{images/unordered.c4.png}
     \caption{Architektura systemu}
-    \label{fig:arch}
+    \label{fig:architecture}
 \end{figure}
 
 \newpage
@@ -72,7 +80,12 @@ Zawiera również informacje o integracji z OpenAI oraz wdrożeniu aplikacji.
     \item \textbf{Losowy} - Generacja losowych propozycji prezentów, bez podawania żadnych parametrów
     \item \textbf{Manualny} - aktualnie brak implementacji
 \end{itemize}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth,keepaspectratio]{images/box_creator.png}
+    \caption{Kreator boxów}
+    \label{fig:box-creator}
+\end{figure}
 \subsubsection{Profil użytkownika}
 Do wygenerowania boxów typu ``Dla profilu'' lub ``Cykliczny'' wymagane jest utworzenie profilu, dla którego dobierane będą propozycje. Dane profilu to:
 \begin{itemize}
@@ -80,6 +93,8 @@ Do wygenerowania boxów typu ``Dla profilu'' lub ``Cykliczny'' wymagane jest utw
     \item \textbf{Opis osoby} (Preferencje, zainteresowania, itp.)
     \item \textbf{Zainteresowania} (Wybór kategorii z gotowej listy)
 \end{itemize}
+
+\newpage
 
 \subsection{Struktura boxa}
 Struktura boxów jest taka sama dla wszystkich typów generowania. Boxy są przechowywane w bazie danych Firestore i zawierają następujące dane:
@@ -93,6 +108,12 @@ Struktura boxów jest taka sama dla wszystkich typów generowania. Boxy są prze
     \item \textbf{Cena} (Suma cen wszystkich produktów w boxie)
     \item \textbf{Lista produktów} (Produkty, które zostały wygenerowane w boxie)
 \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth,keepaspectratio]{images/box_summary.png}
+    \caption{Widok wygenerowanego boxa}
+    \label{fig:box-summary}
+\end{figure}
 
 \section{Integracja z OpenAI}
 \subsection{Opis API}
