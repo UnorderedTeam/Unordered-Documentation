@@ -10,7 +10,11 @@
 \usepackage{float}
 
 \title{Dokumentacja aplikacji Unordered}
-\author{Adam Dybcio\endline Łukasz Czapski\endline Igor Ciżewski\endline Denis Jabłoński\endline Mateusz Sztankiewicz}
+\author{Adam Dybcio\endline
+        Łukasz Czapski\endline
+        Igor Ciżewski\endline
+        Denis Jabłoński\endline
+        Mateusz Sztankiewicz}
 \date{\today}
 
 \begin{document}
@@ -25,8 +29,32 @@
 Dokumentacja ma na celu przedstawienie architektury oraz funkcjonalności aplikacji Unordered.
 Zawiera również informacje o integracji z OpenAI oraz wdrożeniu aplikacji.
 
+\subsection{Wyjaśnienie pojęć}
+
+\begin{description}
+    \item[\textbf{Box}] W kontekście aplikacji Unordered, \emph{box} to spersonalizowany zestaw prezentowy, generowany automatycznie na podstawie profilu osoby obdarowywanej, okazji, budżetu lub wyboru losowego. Box zawiera propozycje konkretnych produktów, które razem tworzą gotowy do wręczenia prezent. Każdy box jest unikalny i dopasowany do wybranych przez użytkownika kryteriów.
+
+    \item[\textbf{AI}] Sztuczna inteligencja, w kontekście aplikacji Unordered odnosi się do wykorzystania modeli językowych OpenAI (np. o4-mini) do generowania spersonalizowanych propozycji prezentów na podstawie kryteriów podanych przez użytkownika.
+\end{description}
+
+\newpage
 \subsection{Opis aplikacji}
-%%\todo{Opis aplikacji}
+Unordered to nowoczesna aplikacja mobilna, która pomaga użytkownikom w szybkim i trafnym wyborze prezentów na różne okazje,
+takie jak urodziny, rocznice czy święta. Głównym celem aplikacji jest automatyzacja procesu doboru prezentów oraz
+przypominanie o ważnych datach, eliminując problem braku pomysłów, czasu czy zapominania o okazjach.
+
+Użytkownik może tworzyć profile osób, dla których planuje prezenty, określając ich zainteresowania i preferencje.
+Następnie, dzięki integracji z AI (OpenAI GPT), aplikacja generuje spersonalizowane propozycje prezentów (tzw. boxy),
+dostosowane do profilu, okazji oraz budżetu. Możliwe jest także ustawienie cyklicznych boxów, które automatycznie
+przypominają i generują prezenty na wybrane daty.
+
+Unordered wyróżnia się pełną automatyzacją - od analizy profilu, przez dobór produktów z wielu platform zakupowych,
+aż po przypomnienia o nadchodzących okazjach. Dzięki temu użytkownik nie musi samodzielnie przeszukiwać sklepów ani
+pamiętać o terminach - aplikacja zrobi to za niego, zapewniając jednocześnie element zaskoczenia i personalizacji.
+
+Aplikacja jest skierowana zarówno do osób prywatnych, jak i firm, które chcą zadbać o swoich pracowników
+czy bliskich, oferując im wyjątkowe, dopasowane prezenty bez zbędnego wysiłku.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\linewidth,keepaspectratio]{images/box_desc.png}
@@ -48,21 +76,39 @@ Zawiera również informacje o integracji z OpenAI oraz wdrożeniu aplikacji.
 \newpage
 
 \subsection{Frontend (Flutter)}
-%%\todo{Opis frontendu fluttera i wgl}
-\begin{itemize}
-    \item Wersja Flutter: [X.Y.Z]
-    \item Główne pakiety: \texttt{firebase\_core}, \texttt{cloud\_functions}, \texttt{http}, etc.
-    \item Struktura katalogów:
-    \begin{lstlisting}[language=bash]
-    \end{lstlisting}
-\end{itemize}
+Aplikacja mobilna Unordered została zrealizowana w technologii Flutter, co umożliwia jej uruchamianie zarówno na systemie Android, jak i iOS. Flutter pozwala na szybkie prototypowanie oraz łatwe wdrażanie zmian w interfejsie użytkownika.
 
+\begin{itemize}
+    \item \textbf{Główne pakiety:}
+    \begin{itemize}
+        \item \texttt{firebase\_core} -- integracja z Firebase
+        \item \texttt{firebase\_auth} -- obsługa uwierzytelniania użytkowników
+        \item \texttt{cloud\_functions} -- wywoływanie funkcji chmurowych backendu
+        \item \texttt{cloud\_firestore} -- dostęp do bazy danych Firestore
+        \item \texttt{http} -- komunikacja z zewnętrznymi API
+    \end{itemize}
+    \item \textbf{Główne funkcjonalności:}
+    \begin{itemize}
+        \item Rejestracja i logowanie użytkownika (SMS/Firebase)
+        \item Tworzenie i edycja profili użytkowników
+        \item Generowanie boxów prezentowych na podstawie profilu, cyklicznie lub losowo
+        \item Przeglądanie historii wygenerowanych boxów
+        \item Przeglądanie kalendarza z zaplanowanymi boxami
+        \item Integracja z backendem (Cloud Functions, Firestore)
+    \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth,keepaspectratio]{images/box_creator.png}
+    \caption{Kreator boxów}
+    \label{fig:box-creator}
+\end{figure}
 \subsection{Backend (Firebase)}
 \begin{itemize}
-    \item \textbf{Baza danych:} Firestore - przechowuje dane użytkowników, zapisane profile, utworzone boxy, listy produktów i jakiekolwiek inne potrzebne dane do działania aplikacji.
-    \item \textbf{Funkcjonalość:} Cloud Functions (Node.js) - obsługuje główne działania backendu aplikacji, takie jak generowanie boxów, komunikacja i przetwarzanie danych z OpenAI czy pobieranie aktualnej listy produktów.
-    \item \textbf{Uwierzytelnianie:} Firebase Authentication - pozwala użytkownikom na rejestrację i logowanie się do aplikacji za pomocą numeru telefonu, używając weryfikacji SMS.
-    \item \textbf{Automatyzacja:} Cloud Functions Scheduler - służy do cyklicznego uruchamiania funkcji, obsługuje m.in. generowanie ``Daily Boxów'' - codziennych propozycji prezentów o losowych kategoriach.
+    \item \textbf{Baza danych:} Firestore -- przechowuje dane użytkowników, zapisane profile, utworzone boxy, listy produktów oraz wszelkie inne dane niezbędne do działania aplikacji.
+    \item \textbf{Funkcjonalność:} Cloud Functions (Node.js) -- obsługuje główne działania backendu aplikacji, takie jak generowanie boxów, komunikacja i przetwarzanie danych z OpenAI oraz pobieranie aktualnej listy produktów.
+    \item \textbf{Uwierzytelnianie:} Firebase Authentication -- pozwala użytkownikom na rejestrację i logowanie się do aplikacji za pomocą numeru telefonu, używając weryfikacji SMS.
+    \item \textbf{Automatyzacja:} Cloud Functions Scheduler -- służy do cyklicznego uruchamiania funkcji, obsługuje m.in. generowanie ``Daily Boxów'' -- codziennych propozycji prezentów o losowych kategoriach.
 \end{itemize}
 
 \newpage
@@ -80,12 +126,6 @@ Zawiera również informacje o integracji z OpenAI oraz wdrożeniu aplikacji.
     \item \textbf{Losowy} - Generacja losowych propozycji prezentów, bez podawania żadnych parametrów
     \item \textbf{Manualny} - aktualnie brak implementacji
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.3\linewidth,keepaspectratio]{images/box_creator.png}
-    \caption{Kreator boxów}
-    \label{fig:box-creator}
-\end{figure}
 \subsubsection{Profil użytkownika}
 Do wygenerowania boxów typu ``Dla profilu'' lub ``Cykliczny'' wymagane jest utworzenie profilu, dla którego dobierane będą propozycje. Dane profilu to:
 \begin{itemize}
@@ -99,14 +139,14 @@ Do wygenerowania boxów typu ``Dla profilu'' lub ``Cykliczny'' wymagane jest utw
 \subsection{Struktura boxa}
 Struktura boxów jest taka sama dla wszystkich typów generowania. Boxy są przechowywane w bazie danych Firestore i zawierają następujące dane:
 \begin{itemize}
-    \item \textbf{Budżet} (Kwota, którą użytkownik chce przeznaczyć na prezenty)
-    \item \textbf{Data wygenerowania} (Data, kiedy box został wygenerowany)
-    \item \textbf{Czy jest cykliczny} (Wartość boolean, czy box jest cykliczny)
-    \item \textbf{Frekwencja cykliczności} (Użyte tylko dla boxów cyklicznych, np. co miesiąc, co rok)
-    \item \textbf{Okazja} (Okazja, na którą box został wygenerowany, np. urodziny, imieniny)
-    \item \textbf{Planowana data} (Data, na którą box został zaplanowany)
-    \item \textbf{Cena} (Suma cen wszystkich produktów w boxie)
-    \item \textbf{Lista produktów} (Produkty, które zostały wygenerowane w boxie)
+    \item \textbf{Budżet} (kwota, którą użytkownik chce przeznaczyć na prezenty)
+    \item \textbf{Data wygenerowania} (data, kiedy box został wygenerowany)
+    \item \textbf{Czy jest cykliczny} (wartość logiczna, czy box jest cykliczny)
+    \item \textbf{Frekwencja cykliczności} (używane tylko dla boxów cyklicznych, np. co miesiąc, co rok)
+    \item \textbf{Okazja} (okazja, na którą box został wygenerowany, np. urodziny, imieniny)
+    \item \textbf{Planowana data} (data, na którą box został zaplanowany)
+    \item \textbf{Cena} (suma cen wszystkich produktów w boxie)
+    \item \textbf{Lista produktów} (produkty, które zostały wygenerowane w boxie)
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -114,17 +154,16 @@ Struktura boxów jest taka sama dla wszystkich typów generowania. Boxy są prze
     \caption{Widok wygenerowanego boxa}
     \label{fig:box-summary}
 \end{figure}
-
+\newpage
 \section{Integracja z OpenAI}
 \subsection{Opis API}
-Wybranym do generacji modelem jest \textbf{gpt-o4-mini}.
+Wybranym do generacji modelem jest \textbf{OpenAI o4-mini}.
 Wybór modelu jest uzasadniony
 jego działaniem w trybie ``reasoning'' który pozwala na generacje biorącą pod
 uwagę wszystkie parametry podane przez użytkownika.
-Jest on również tańszym wyborem, w porównaniu do modeli \textbf{gpt-4.1} oraz \textbf{gpt-o3}.
+Jest on również tańszym wyborem, w porównaniu do modeli \textbf{GPT-4.1} oraz \textbf{OpenAI o3}.
 \subsection{Prompt engineering}
-Przy inżynierii promptów uwaga była skupiona na wykorzystaniu najmniejszej ilości tokenów
-przy zachowaniu jak najlepszej jakości odpowiedzi.
+Przy inżynierii promptów uwaga była skupiona na wykorzystaniu najmniejszej liczby tokenów przy zachowaniu jak najlepszej jakości odpowiedzi.
 Strukturą wszystkich promptów jest:
 \textbf{ZASADA}$\rightarrow$\textbf{OPIS ZASADY}
 \begin{itemize}
@@ -146,23 +185,48 @@ Strukturą wszystkich promptów jest:
 \end{itemize}
 \subsection{Przetwarzanie odpowiedzi}
 Formatem zwróconej odpowiedzi jest JSON array, który zawiera listę samych ID produktów,
-aby zminimalizować ilość tokenów. Następnie ID są sprawdzane oraz przetwarzane przez backend.
+aby zminimalizować liczbę tokenów. Następnie ID są sprawdzane oraz przetwarzane przez backend.
 
 \section{Wdrożenie}
 \subsection{Konfiguracja Firebase}
-Aby wdrożyć funkcje chmurowe (Cloud Functions) za pomocą Firebase, należy użyć narzędzia \texttt{firebase} dostępnego przez npm, oraz zainicjować projekt i wdrożyć funkcję do projektu Firebase.
-Po wdrożeniu należy upewnić się, że adresy (linki) do nowych funkcji są zgodne zarówno w kodzie backendu (Cloud Functions), jak i w wywołaniach po stronie frontendu Flutter. Spójność nazw i endpointów jest kluczowa dla poprawnej komunikacji między aplikacją a backendem.
+Aby wdrożyć funkcje chmurowe (Cloud Functions) za pomocą Firebase,
+należy użyć narzędzia \texttt{firebase} dostępnego przez npm,
+oraz zainicjować projekt i wdrożyć funkcję do projektu Firebase.
+Po wdrożeniu należy upewnić się, że adresy (linki) do nowych funkcji są zgodne
+zarówno w kodzie backendu (Cloud Functions), jak i w wywołaniach po stronie frontendu Flutter.
+Spójność nazw i endpointów jest kluczowa dla poprawnej komunikacji między aplikacją a backendem.
 
 \newpage
 \section{Podsumowanie i dalszy rozwój}
-%%\todo{Zrobić podsumowanie i rozwój}
+
+Aplikacja wyróżnia się na tle konkurencji pełną automatyzacją,
+możliwą integracją z platformami zakupowymi oraz możliwością personalizacji prezentów na podstawie
+profilu obdarowywanej osoby. Dzięki temu użytkownik zyskuje pewność, że prezent będzie trafiony,
+a cały proces przebiegnie sprawnie i bez zbędnego wysiłku.
+
 \subsection{Znane ograniczenia}
 \begin{itemize}
-    \item Ograniczenia, limity związane np z OpenAI, firebase, etc.
+    \item Ograniczenia i limity związane z wykorzystaniem API OpenAI (np. limity tokenów, koszty).
+    \item Limity Firebase dotyczące liczby operacji, przechowywania danych i autoryzacji.
+    \item Dostępność produktów zależna od integracji z zewnętrznymi platformami zakupowymi.
+    \item Brak pełnej automatyzacji zamówień fizycznych (na obecnym etapie aplikacja generuje propozycje, nie realizuje zamówień).
 \end{itemize}
 
 \subsection{Roadmap}
-Planowane funkcje (np. integracja z sklepami).
+Wśród planowanych kierunków rozwoju aplikacji znajdują się:
+\begin{itemize}
+    \item Integracja z dodatkowymi platformami zakupowymi, co pozwoli na jeszcze szerszy wybór produktów.
+    \item Współpraca z markami i sklepami -- możliwość tworzenia dedykowanych boxów z konkretnych sklepów lub marek.
+    \item System subskrypcji -- użytkownik mógłby otrzymywać cykliczne, personalizowane boxy za miesięczną lub roczną opłatą.
+    \item Rozbudowa funkcji kalendarza i przypomnień, w tym integracja z kalendarzem Google lub Outlook.
+    \item Współpraca z influencerami i działania marketingowe skierowane do młodych, zabieganych osób.
+    \item Usprawnienie procesu zamawiania -- możliwość bezpośredniego zamówienia produktów z poziomu aplikacji.
+    \item Rozszerzenie funkcjonalności AI o jeszcze lepsze dopasowanie prezentów do profilu użytkownika.
+\end{itemize}
+
+Unordered jest projektem otwartym na dalszy rozwój i nowe pomysły,
+a jego architektura pozwala na łatwe wdrażanie kolejnych funkcjonalności
+w odpowiedzi na potrzeby użytkowników i rynku.
 
 \begin{thebibliography}{9}
 \bibitem{flutter}
