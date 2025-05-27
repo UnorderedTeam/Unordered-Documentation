@@ -1,0 +1,28 @@
+site_name: Dokumentacja aplikacji Unordered
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.annotate
+  palette:
+    scheme: unordered
+  language: pl
+  logo: icon.png
+
+nav:
+  - Strona główna: index.md
+  - Flutter:
+    - Przegląd: flutter/overview.md
+    - Widgety: flutter/widgets.md
+  - Cloud Functions:
+    - Przegląd: gcloud/overview.md
+    - Funkcje: gcloud/functions.md
+
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+extra_css:
+  - css/colors.css
