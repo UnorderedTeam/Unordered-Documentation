@@ -76,7 +76,7 @@ Tworzy prompt zawierający tylko listę produktów.
 ```javascript
 const prompt = "Products: "+ JSON.stringify(productsData);
 ```
-Wysyła prompt i token autoryzacyjny użytkownika do [funkcji randomOpenAIResponse](#32-funkcja-randomopenairesponse), która generuje losowe rekomendacje produktów.
+Wysyła prompt i token autoryzacyjny użytkownika do [funkcji randomOpenAIResponse](#33-funkcja-randomopenairesponse), która generuje losowe rekomendacje produktów.
 ```javascript
 const openaiResponse = await axios.post(
     "https://openai-randomopenairesponse-dp75kddpea-ew.a.run.app/",
@@ -114,7 +114,7 @@ Funkcja uruchamiana automatycznie każdego dnia o 02:00 (UTC).
 exports.createDailyBoxes = onSchedule("every day 02:00", async (event) => {
   // ...losowanie tematów i budżetów...
 ```
-Dla każdego z 5 tematów generuje prompt, wywołuje OpenAI i zapisuje box w bazie.
+Dla każdego z 5 tematów generuje prompt i wywołuje [funkcję dailyOpenAIResponse](#32-funkcja-dailyopenairesponse) do wygenerowania rekomendacji produktów.
 ```javascript
 for (let i=0; i<5; i++) {
   // ...generowanie promptu i wywołanie OpenAI...
