@@ -1,0 +1,901 @@
+
+<!doctype html>
+<html lang="pl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../firestore/overview/">
+      
+      
+        <link rel="next" href="../widgets/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Przegląd - Dokumentacja aplikacji Unordered</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/colors.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="unordered" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dokumentacja-frontend-flutter" class="md-skip">
+          Przejdź do treści
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Nagłówek">
+    <a href="../.." title="Dokumentacja aplikacji Unordered" class="md-header__button md-logo" aria-label="Dokumentacja aplikacji Unordered" data-md-component="logo">
+      
+  <img src="../../icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dokumentacja aplikacji Unordered
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Przegląd
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Szukaj" placeholder="Szukaj" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Szukaj">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Wyczyść" aria-label="Wyczyść" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicjowanie wyszukiwania
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Zakładki" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Strona główna
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gcloud/overview/" class="md-tabs__link">
+          
+  
+  
+  Firebase
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../firestore/overview/" class="md-tabs__link">
+          
+  
+  
+  Firestore
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Flutter
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Nawigacja" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Dokumentacja aplikacji Unordered" class="md-nav__button md-logo" aria-label="Dokumentacja aplikacji Unordered" data-md-component="logo">
+      
+  <img src="../../icon.png" alt="logo">
+
+    </a>
+    Dokumentacja aplikacji Unordered
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strona główna
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firebase
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Firebase
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcloud/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcloud/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funkcje
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firestore
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firestore
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firestore/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Flutter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Spis treści">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wprowadzenie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wprowadzenie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wymagania-systemowe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wymagania systemowe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacja-i-uruchomienie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalacja i uruchomienie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struktura-projektu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struktura projektu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gowne-zaleznosci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Główne zależności
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opis-funkcjonalnosci-interfejsy-uzytkownika" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opis funkcjonalności (interfejsy użytkownika)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Widgety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Spis treści">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wprowadzenie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wprowadzenie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wymagania-systemowe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wymagania systemowe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacja-i-uruchomienie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalacja i uruchomienie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struktura-projektu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struktura projektu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gowne-zaleznosci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Główne zależności
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opis-funkcjonalnosci-interfejsy-uzytkownika" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opis funkcjonalności (interfejsy użytkownika)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dokumentacja-frontend-flutter">Dokumentacja Frontend (Flutter)</h1>
+<h2 id="wprowadzenie">Wprowadzenie</h2>
+<p>Unordered-Mobile to aplikacja mobilna napisana w Flutterze, spełniająca funkcję frontendu dla aplikacji Unordered. Umożliwia użytkownikom tworzenie i zarządzanie boxami, przeglądanie historii zamówień, zarządzanie profilami odbiorców oraz korzystanie z powiadomień.</p>
+<h2 id="wymagania-systemowe">Wymagania systemowe</h2>
+<ul>
+<li>Flutter SDK</li>
+<li>Dart (zalecana najnowsza wersja)</li>
+<li>Android Studio lub Xcode (dla Android/iOS)</li>
+<li>Konto Firebase z odpowiednią konfiguracją projektu</li>
+</ul>
+<h2 id="instalacja-i-uruchomienie">Instalacja i uruchomienie</h2>
+<ol>
+<li>Przejdź do katalogu projektu.</li>
+<li>Zainstaluj zależności:<br />
+<code>flutter pub get</code></li>
+<li>Skonfiguruj pliki środowiskowe Firebase komendą:
+   <code>flutterfire configure</code></li>
+<li>Uruchom aplikację na emulatorze lub urządzeniu fizycznym:<br />
+<code>flutter run</code></li>
+</ol>
+<h2 id="struktura-projektu">Struktura projektu</h2>
+<p>Główne katalogi i pliki:</p>
+<ul>
+<li><code>lib/</code> – kod źródłowy aplikacji Flutter:</li>
+<li><code>core/</code> – podstawowe klasy i funkcje</li>
+<li><code>features/</code> – moduły funkcjonalne (np. boxy, profile, historia)<ul>
+<li><code>mystery_box_creator/</code> – kreator boxów</li>
+<li><code>mystery_box_discover/</code> – przeglądanie boxów</li>
+<li><code>user_center/</code> – zarządzanie profilami użytkowników</li>
+<li><code>welcome_new_users/</code> – ekran powitalny dla nowych użytkowników</li>
+</ul>
+</li>
+<li><code>custom_navigation.dart</code> – niestandardowa nawigacja</li>
+<li><code>main.dart</code> – punkt wejścia aplikacji</li>
+<li><code>firebase_options.dart</code> – konfiguracja Firebase</li>
+</ul>
+<h2 id="gowne-zaleznosci">Główne zależności</h2>
+<ul>
+<li><strong>cupertino_icons</strong> – zestaw ikon w stylu iOS</li>
+<li><strong>decimal</strong> – precyzyjna arytmetyka dziesiętna</li>
+<li><strong>font_awesome_flutter</strong> – ikony FontAwesome</li>
+<li><strong>animate_do</strong> – animacje UI</li>
+<li><strong>google_maps_flutter</strong> – integracja z Mapami Google</li>
+<li><strong>intl</strong> – obsługa dat i czasu, lokalizacja</li>
+<li><strong>get</strong> – zarządzanie stanem, routing</li>
+<li><strong>get_storage</strong> – lokalna baza danych</li>
+<li><strong>get_it</strong> – wstrzykiwanie zależności (dependency injection)</li>
+<li><strong>dio</strong> – zapytania HTTP</li>
+<li><strong>firebase_core</strong> – inicjalizacja Firebase</li>
+<li><strong>firebase_auth</strong> – uwierzytelnianie użytkowników</li>
+<li><strong>cloud_firestore</strong> – baza danych Firestore</li>
+<li><strong>cloud_functions</strong> – wywoływanie funkcji chmurowych Firebase</li>
+<li><strong>http</strong> – zapytania HTTP</li>
+<li><strong>rxdart</strong> – programowanie reaktywne, obsługa strumieni</li>
+<li><strong>lottie</strong> – animacje Lottie (gify)</li>
+<li><strong>smooth_page_indicator</strong> – wskaźniki stron (np. onboarding)</li>
+<li><strong>google_fonts</strong> – czcionki Google Fonts</li>
+<li><strong>timeline_tile</strong> – oś czasu w UI</li>
+<li><strong>readmore</strong> – rozwijane teksty</li>
+<li><strong>table_calendar</strong> – kalendarz w UI</li>
+<li><strong>shimmer</strong> – efekt ładowania shimmer</li>
+<li><strong>photo_view</strong> – powiększanie zdjęć</li>
+<li><strong>google_nav_bar</strong> – dolna nawigacja w stylu Google</li>
+</ul>
+<h2 id="opis-funkcjonalnosci-interfejsy-uzytkownika">Opis funkcjonalności (interfejsy użytkownika)</h2>
+<ul>
+<li><strong>Tworzenie mystery boxów (kreator):</strong><br />
+  Interfejs umożliwia użytkownikowi utworzenie boxa na podstawie profilu, budżetu i okazji lub wygenerowanie boxa losowego. Kreator prowadzi przez kolejne kroki wyboru.</li>
+<li><strong>Zarządzanie profilami odbiorców:</strong><br />
+  Interfejs pozwala na tworzenie, edycję i usuwanie profili odbiorców boxów (np. rodzina, znajomi).</li>
+<li><strong>Historia zamówień i boxów:</strong><br />
+  Interfejs umożliwia przeglądanie historii zamówień, szczegółów boxów oraz statusów realizacji.</li>
+<li><strong>Powiadomienia i promocje:</strong><br />
+  Interfejs prezentuje powiadomienia o statusie zamówień, promocjach i nowościach.</li>
+<li><strong>Zarządzanie kontem użytkownika:</strong><br />
+  Interfejs pozwala użytkownikowi na zarządzanie swoim kontem.</li>
+</ul>
+<p>Funkcjonalność oraz widoki poszczególnych modułów są opisane na stronie <a href="../widgets/">Dokumentacja Widgetów Flutter</a>.</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Skopiowano do schowka", "clipboard.copy": "Kopiuj do schowka", "search.result.more.one": "1 wi\u0119cej na tej stronie", "search.result.more.other": "# wi\u0119cej na tej stronie", "search.result.none": "Brak wynik\u00f3w wyszukiwania", "search.result.one": "Wyniki wyszukiwania: 1", "search.result.other": "Wyniki wyszukiwania: #", "search.result.placeholder": "Zacznij pisa\u0107, aby szuka\u0107", "search.result.term.missing": "Brak", "select.version": "Wybierz wersj\u0119"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

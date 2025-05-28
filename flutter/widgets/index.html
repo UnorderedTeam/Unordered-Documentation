@@ -1,0 +1,1871 @@
+
+<!doctype html>
+<html lang="pl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Widgety - Dokumentacja aplikacji Unordered</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/colors.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="unordered" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dokumentacja-widgetow-flutter" class="md-skip">
+          Przejdź do treści
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Nagłówek">
+    <a href="../.." title="Dokumentacja aplikacji Unordered" class="md-header__button md-logo" aria-label="Dokumentacja aplikacji Unordered" data-md-component="logo">
+      
+  <img src="../../icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dokumentacja aplikacji Unordered
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Widgety
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Szukaj" placeholder="Szukaj" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Szukaj">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Wyczyść" aria-label="Wyczyść" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicjowanie wyszukiwania
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Zakładki" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Strona główna
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gcloud/overview/" class="md-tabs__link">
+          
+  
+  
+  Firebase
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../firestore/overview/" class="md-tabs__link">
+          
+  
+  
+  Firestore
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+  Flutter
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Nawigacja" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Dokumentacja aplikacji Unordered" class="md-nav__button md-logo" aria-label="Dokumentacja aplikacji Unordered" data-md-component="logo">
+      
+  <img src="../../icon.png" alt="logo">
+
+    </a>
+    Dokumentacja aplikacji Unordered
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strona główna
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firebase
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Firebase
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcloud/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcloud/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funkcje
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firestore
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firestore
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firestore/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Flutter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Widgety
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Widgety
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Spis treści">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wprowadzenie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wprowadzenie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strony
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strony">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strona-powitalna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona powitalna
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-gowna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona główna
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strona kreatora boxów">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow-dla-profilu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów Dla profilu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strona kreatora boxów Dla profilu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wybor-profilu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór profilu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-okazji" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór okazji
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-budzetu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór budżetu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-daty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór daty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#podsumowanie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Podsumowanie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow-losowy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów Losowy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow-cykliczny" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów Cykliczny
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strona kreatora boxów Cykliczny">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wybor-profilu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór profilu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-okazji_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór okazji
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-budzetu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór budżetu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-cyklu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór cyklu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#podsumowanie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Podsumowanie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow-manualny" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów Manualny
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-uzytkownika" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum użytkownika
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strona centrum użytkownika">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-boxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje boxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-zamowienia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje zamówienia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-ulubione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje ulubione
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-nadchodzace-boxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Nadchodzące boxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-ustawienia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje ustawienia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-wyczysc-wszystkie-dane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Wyczyść wszystkie dane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-zamknij-konto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Zamknij konto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-informacje-o-nas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Informacje o nas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#podsumowanie-widgetow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Podsumowanie widgetów
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Spis treści">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wprowadzenie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wprowadzenie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strony
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strony">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strona-powitalna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona powitalna
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-gowna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona główna
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strona kreatora boxów">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow-dla-profilu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów Dla profilu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strona kreatora boxów Dla profilu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wybor-profilu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór profilu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-okazji" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór okazji
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-budzetu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór budżetu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-daty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór daty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#podsumowanie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Podsumowanie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow-losowy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów Losowy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow-cykliczny" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów Cykliczny
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strona kreatora boxów Cykliczny">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wybor-profilu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór profilu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-okazji_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór okazji
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-budzetu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór budżetu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wybor-cyklu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór cyklu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#podsumowanie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Podsumowanie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-kreatora-boxow-manualny" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona kreatora boxów Manualny
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-uzytkownika" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum użytkownika
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strona centrum użytkownika">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-boxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje boxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-zamowienia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje zamówienia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-ulubione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje ulubione
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-nadchodzace-boxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Nadchodzące boxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-moje-ustawienia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Moje ustawienia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-wyczysc-wszystkie-dane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Wyczyść wszystkie dane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-zamknij-konto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Zamknij konto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strona-centrum-informacje-o-nas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strona centrum Informacje o nas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#podsumowanie-widgetow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Podsumowanie widgetów
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dokumentacja-widgetow-flutter">Dokumentacja widgetów (Flutter)</h1>
+<hr />
+<h2 id="wprowadzenie">Wprowadzenie</h2>
+<p>W tej sekcji znajdziesz dokumentację widgetów użytych w aplikacji Flutter. Każdy widget jest opisany wraz z jego przeznaczeniem, lokalizacją w kodzie oraz zrzutem ekranu. Dokumentacja ta ma na celu ułatwienie zrozumienia struktury aplikacji i jej komponentów.</p>
+<hr />
+<h2 id="strony">Strony</h2>
+<h3 id="strona-powitalna">Strona powitalna</h3>
+<ul>
+<li><strong>Plik:</strong> <code>features/welcome_new_users/presentation/pages/introduction_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/intro.png" alt="Strona powitalna" width="300"/></li>
+<li>
+<p><strong>Opis:</strong><br />
+    Strona powitalna dla nowych użytkowników, prowadząca przez proces rejestracji i weryfikacji numeru telefonu.</p>
+</li>
+<li>
+<p><strong>Użyte widgety:</strong></p>
+<ul>
+<li><code>WelcomeStep</code>:<br />
+  Ekran powitalny z banerem, animacją Lottie oraz przyciskiem "Rozpocznij przygodę".</li>
+<li><code>NumberStep</code>:<br />
+  Formularz do wprowadzenia numeru telefonu, z walidacją i animacją Lottie.</li>
+<li><code>VerificationStep</code>:<br />
+  Ekran do wpisania kodu SMS, z polami na cyfry, obsługą timera i przyciskami do weryfikacji oraz ponownego wysłania kodu.</li>
+<li><code>SuccessStep</code>:<br />
+  Ekran końcowy informujący o sukcesie rejestracji.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="strona-gowna">Strona główna</h3>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_discover/presentation/pages/home_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/mainpage.png" alt="Strona główna" width="300"/></li>
+<li>
+<p><strong>Opis:</strong><br />
+    Główna strona aplikacji prezentująca użytkownikowi różne sekcje z ofertami i kategoriami. Zawiera m.in. baner promocyjny, sekcję dziennych boxów, ostatnio udostępnione boxy, kategorie oraz propozycje ponownych zamówień. Strona korzysta z <code>CustomScrollView</code> i wielu własnych widgetów-sekcji.</p>
+</li>
+<li>
+<p><strong>Użyte widgety:</strong></p>
+<ul>
+<li><code>CustomAppBar</code>:<br />
+  Niestandardowy pasek aplikacji z tłem i tytułem.</li>
+<li><code>DailyBoxesSection</code>:<br />
+  Sekcja prezentująca dzisiejsze boxy do odkrycia.</li>
+<li><code>PromotionHeader</code>:<br />
+  Baner promocyjny z animacjami Lottie i rozmytym tłem.</li>
+<li><code>SharedBoxesSection</code>:<br />
+  Sekcja z ostatnio udostępnionymi boxami przez innych użytkowników.</li>
+<li><code>HomeCategories</code>:<br />
+  Lista kategorii dostępnych boxów.</li>
+<li><code>MayLikeSection</code>:<br />
+  Propozycje boxów, które mogą zainteresować użytkownika.</li>
+<li><code>OrderAgainSection</code>:<br />
+  Sekcja z boxami, które użytkownik może zamówić ponownie.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="strona-kreatora-boxow">Strona kreatora boxów</h3>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_creator/presentation/pages/creator_start_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/box_creator.png" alt="Kreator boxów" width="300"/></li>
+<li>
+<p><strong>Opis:</strong><br />
+    Strona umożliwiająca użytkownikowi rozpoczęcie procesu tworzenia własnego Mystery Boxa. Użytkownik wybiera typ boxa (np. profilowy, losowy, cykliczny, manualny), a następnie przechodzi przez kolejne kroki kreatora. Każdy typ boxa może mieć własny opis i ścieżkę tworzenia.</p>
+</li>
+<li>
+<p><strong>Użyte widgety:</strong></p>
+<ul>
+<li><code>CreatorTitle</code>:<br />
+  Nagłówek strony kreatora z tytułem i krótkim opisem.  </li>
+<li><code>CreatorTypes</code>:<br />
+  Lista dostępnych typów boxów do wyboru przez użytkownika.  </li>
+<li><code>CreatorTypeCard</code>:<br />
+  Karta reprezentująca pojedynczy typ boxa, z ikoną, tytułem, opisem i opcjonalnym przyciskiem informacyjnym.  </li>
+<li><code>CreatorProfileInfoPage</code>:<br />
+  Strona z informacjami o wybranym typie boxa oraz krokami procesu tworzenia.  </li>
+<li><code>CreatorSteps</code>:<br />
+  Wizualizacja kroków procesu tworzenia boxa w formie osi czasu.  </li>
+<li><code>CreatorTimelinePoint</code>, <code>CreatorTimelineDivider</code>:<br />
+  Elementy osi czasu używane w <code>CreatorSteps</code>.  </li>
+<li><code>CreatorButton</code>:<br />
+  Przycisk powrotu do kreatora z ekranu informacyjnego.  </li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-kreatora-boxow-dla-profilu">Strona kreatora boxów <code>Dla profilu</code></h4>
+<ul>
+<li>
+<p><strong>Opis:</strong><br />
+    Kreator boxów dla wybranego profilu użytkownika. Umożliwia przejście przez kolejne kroki: wybór profilu odbiorcy, okazji, budżetu, daty (lub cyklu) oraz podsumowanie. Każdy krok prezentowany jest jako osobny ekran w <code>PageView</code>.</p>
+</li>
+<li>
+<p><strong>Użyte widgety:</strong></p>
+<ul>
+<li><code>StepIndicator</code>:<br />
+  Pasek postępu wyświetlający aktualny krok kreatora.</li>
+<li><code>RecipientStep</code>:<br />
+  Krok wyboru profilu odbiorcy boxa.</li>
+<li><code>OccasionStep</code>:<br />
+  Krok wyboru okazji (z listy lub własny opis).</li>
+<li><code>BudgetStep</code>:<br />
+  Krok wyboru budżetu (z listy lub własny).</li>
+<li><code>CycleStep</code>:<br />
+  Krok wyboru daty lub cykliczności (dla boxów cyklicznych).</li>
+<li><code>CheckStep</code>:<br />
+  Podsumowanie wszystkich wybranych opcji przed utworzeniem boxa.</li>
+</ul>
+</li>
+</ul>
+<h5 id="wybor-profilu">Wybór profilu</h5>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_creator/presentation/widgets/creator_profile_page/recipient_step.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/profile_sel.png" alt="Wybór profilu" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Pozwala wybrać istniejący profil odbiorcy lub dodać nowy profil. Wyświetla listę profili użytkownika z możliwością wyboru.</li>
+</ul>
+<h5 id="wybor-okazji">Wybór okazji</h5>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_creator/presentation/widgets/creator_profile_page/occasion_step.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/occasion.png" alt="Wybór okazji" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Umożliwia wybór okazji z predefiniowanych kategorii lub wpisanie własnej okazji.</li>
+</ul>
+<h5 id="wybor-budzetu">Wybór budżetu</h5>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_creator/presentation/widgets/creator_profile_page/budget_step.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/budget.png" alt="Wybór budżetu" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Pozwala określić budżet boxa – z listy lub wpisując własną wartość.</li>
+</ul>
+<h5 id="wybor-daty">Wybór daty</h5>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_creator/presentation/widgets/creator_profile_page/cycle_step.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/cal_sel.png" alt="Wybór daty" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Pozwala wybrać datę realizacji boxa.</li>
+</ul>
+<h5 id="podsumowanie">Podsumowanie</h5>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_creator/presentation/widgets/creator_profile_page/check_step.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/box_summ.png" alt="Podsumowanie" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Podsumowanie wszystkich wybranych opcji. Użytkownik może zatwierdzić utworzenie boxa.</li>
+</ul>
+<h4 id="strona-kreatora-boxow-losowy">Strona kreatora boxów <code>Losowy</code></h4>
+<ul>
+<li><strong>Opis:</strong><br />
+    Kreator boxów losowych, gdzie model AI decyduje o parametrach i finalnej zawartości boxa, bez ingerencji użytkownika. Użytkownik wybiera tę opcję na stronie startowej kreatora, a następnie wyświetlany jest ekran ładowania i po chwili podsumowanie wygenerowanego boxa.</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>CustomLoadingScreen</code>:<br />
+  Ekran ładowania z animacją i komunikatem o generowaniu boxa przez AI.</li>
+<li><code>MysteryBoxSummaryScreen</code>:<br />
+  Podsumowanie wygenerowanego boxa (zawartość, cena, szczegóły).</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-kreatora-boxow-cykliczny">Strona kreatora boxów <code>Cykliczny</code></h4>
+<ul>
+<li><strong>Opis:</strong><br />
+    Kreator boxów cyklicznych, gdzie użytkownik ustawia cykl (np. co miesiąc) i AI generuje boxy automatycznie na podstawie profilu i budżetu. Większość kroków jest identyczna jak w kreatorze "Dla profilu" (patrz wyżej), z wyjątkiem kroku wyboru daty, gdzie pojawia się dodatkowa opcja wyboru częstotliwości cyklu.</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><a href="#strona-kreatora-boxow-dla-profilu">Analogiczne widgety jak w kreatorze "Dla profilu"</a></li>
+<li><code>CycleFrequencyWidgets</code>:<br />
+  Pozwala wybrać częstotliwość cyklu (np. co tydzień, miesiąc, rok).</li>
+</ul>
+</li>
+</ul>
+<h5 id="wybor-profilu_1">Wybór profilu</h5>
+<p><a href="#wybor-profilu">Analogiczne jak w kreatorze "Dla profilu"</a></p>
+<h5 id="wybor-okazji_1">Wybór okazji</h5>
+<p><a href="#wybor-okazji">Analogiczne jak w kreatorze "Dla profilu"</a></p>
+<h5 id="wybor-budzetu_1">Wybór budżetu</h5>
+<p><a href="#wybor-budzetu">Analogiczne jak w kreatorze "Dla profilu"</a></p>
+<h5 id="wybor-cyklu">Wybór cyklu</h5>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_creator/presentation/widgets/creator_profile_page/cycle_step.dart</code></li>
+<li><strong>Zrzut ekranu:</strong>
+    <br><img src="../images/cycle.png" alt="Wybór cyklu" width="300"/></li>
+<li><strong>Opis:</strong>
+    Umożliwia wybór częstotliwości cyklu boxa (np. co tydzień, miesiąc, rok) oraz daty pierwszego boxa.</li>
+</ul>
+<h5 id="podsumowanie_1">Podsumowanie</h5>
+<ul>
+<li><strong>Plik:</strong> <code>features/mystery_box_creator/presentation/widgets/creator_profile_page/check_step.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/cycle_summ.png" alt="Podsumowanie" width="300"/></li>
+<li><strong>Opis:</strong>
+    Podsumowanie wszystkich wybranych opcji cyklicznego boxa.</li>
+</ul>
+<h4 id="strona-kreatora-boxow-manualny">Strona kreatora boxów <code>Manualny</code></h4>
+<ul>
+<li><strong>Opis:</strong>
+    Funkcjonalność nie jest jeszcze zaimplementowana, powiadamia użytkownika o dostępności w przyszłości.</li>
+</ul>
+<hr />
+<h3 id="strona-centrum-uzytkownika">Strona centrum użytkownika</h3>
+<ul>
+<li><strong>Plik:</strong> <code>features/user_center/presentation/pages/center_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/center.png" alt="Centrum użytkownika" width="300"/></li>
+<li>
+<p><strong>Opis:</strong><br />
+    Strona centrum użytkownika, gdzie użytkownik może zarządzać swoimi profilami, boxami, zamówieniami, ulubionymi, nadchodzącymi boxami, ustawieniami, kontem oraz uzyskać informacje o aplikacji. Zawiera sekcje tematyczne z listami opcji oraz przyciskiem wylogowania.</p>
+</li>
+<li>
+<p><strong>Użyte widgety:</strong></p>
+<ul>
+<li><code>CustomAppBar</code>:<br />
+  Pasek nagłówka z tłem i tytułem sekcji centrum użytkownika.</li>
+<li><code>CenterSection</code>:<br />
+  Nagłówek sekcji tematycznej (np. "Moje boxy", "Ustawienia", "Konto", "O nas").</li>
+<li><code>CenterBoxesList</code>:<br />
+  Lista kafelków nawigacyjnych do podstron związanych z boxami/profilami/zamówieniami/ulubionymi/nadchodzącymi boxami.</li>
+<li><code>CenterSettingsList</code>:<br />
+  Lista kafelków do ustawień aplikacji.</li>
+<li><code>CenterAccountList</code>:<br />
+  Lista kafelków do zarządzania kontem (np. czyszczenie danych, zamknięcie konta).</li>
+<li><code>CenterAboutList</code>:<br />
+  Lista kafelków z informacjami o aplikacji i twórcach.</li>
+<li><code>LogoutButton</code>:<br />
+  Przycisk wylogowania użytkownika z aplikacji.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-moje-profile">Strona centrum  <code>Moje profile</code></h4>
+<ul>
+<li><strong>Plik:</strong> <code>features/user_center/presentation/pages/my_profiles_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/profiles.png" alt="Moje profile" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Pozwala zarządzać profilami użytkownika – przeglądać, edytować, usuwać i dodawać nowe profile. Każdy profil prezentowany jest w formie karty z informacjami i przyciskami akcji.</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>ProfileWidget</code>:<br />
+  Karta prezentująca pojedynczy profil użytkownika.</li>
+<li><code>SummaryBanner</code>:<br />
+  Baner z przyciskiem do dodania nowego profilu.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-moje-boxy">Strona centrum  <code>Moje boxy</code></h4>
+<ul>
+<li><strong>Plik:</strong> <code>features/user_center/presentation/pages/my_boxes_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/myboxes.png" alt="Moje boxy" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Lista wszystkich boxów utworzonych przez użytkownika. Pozwala przeglądać szczegóły, usuwać boxy oraz zobaczyć ich zawartość.</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>MysteryBoxWidget</code>:<br />
+  Karta prezentująca pojedynczy box użytkownika.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-moje-zamowienia">Strona centrum  <code>Moje zamówienia</code></h4>
+<ul>
+<li><strong>Plik:</strong> <code>features/user_center/presentation/pages/my_orders_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/myorders.png" alt="Moje zamówienia" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Historia zamówień użytkownika z podziałem na statusy (oczekujące, zrealizowane, anulowane). Pozwala przeglądać szczegóły zamówień i ponawiać zamówienia.</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>OrderCard</code>:<br />
+  Karta prezentująca pojedyncze zamówienie.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-moje-ulubione">Strona centrum  <code>Moje ulubione</code></h4>
+<ul>
+<li><strong>Plik:</strong> <code>features/user_center/presentation/pages/favorites_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/myfav.png" alt="Moje ulubione" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Lista boxów polubionych przez użytkownika. Pozwala szybko przejść do szczegółów wybranego boxa.</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>MysteryBoxWidget</code>:<br />
+  Karta prezentująca polubiony box.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-nadchodzace-boxy">Strona centrum  <code>Nadchodzące boxy</code></h4>
+<ul>
+<li><strong>Plik:</strong> <code>features/user_center/presentation/pages/upcoming_boxes_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/calendar.png" alt="Nadchodzące boxy" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Lista boxów, które mają zostać dostarczone w przyszłości (np. boxy cykliczne).</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>MysteryBoxWidget</code>:<br />
+  Karta prezentująca nadchodzący box.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-moje-ustawienia">Strona centrum  <code>Moje ustawienia</code></h4>
+<ul>
+<li><strong>Plik:</strong> <code>features/user_center/presentation/pages/settings_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/options.png" alt="Moje ustawienia" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Ustawienia aplikacji, w tym motyw, preferencje i informacje o aplikacji.</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>AppThemeWidget</code>:<br />
+  Zmiana motywu aplikacji.</li>
+<li><code>PreferencesWidget</code>:<br />
+  Preferencje użytkownika.</li>
+<li><code>InfoWidget</code>:<br />
+  Informacje o aplikacji.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-wyczysc-wszystkie-dane">Strona centrum  <code>Wyczyść wszystkie dane</code></h4>
+<ul>
+<li><strong>Opis:</strong><br />
+    Opcja umożliwiająca wyczyszczenie wszystkich danych użytkownika z aplikacji (funkcjonalność do zaimplementowania).</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>CenterTile</code>:<br />
+  Kafelek akcji.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-zamknij-konto">Strona centrum  <code>Zamknij konto</code></h4>
+<ul>
+<li><strong>Opis:</strong><br />
+    Opcja umożliwiająca zamknięcie konta użytkownika (funkcjonalność do zaimplementowania).</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>CenterTile</code>:<br />
+  Kafelek akcji.</li>
+</ul>
+</li>
+</ul>
+<h4 id="strona-centrum-informacje-o-nas">Strona centrum  <code>Informacje o nas</code></h4>
+<ul>
+<li><strong>Plik:</strong> <code>features/user_center/presentation/pages/info_page.dart</code></li>
+<li><strong>Zrzut ekranu:</strong><br />
+    <img src="../images/desc.png" alt="Informacje o nas" width="300"/></li>
+<li><strong>Opis:</strong><br />
+    Strona z informacjami o twórcach aplikacji, misji projektu oraz cytatem motywacyjnym.</li>
+<li><strong>Użyte widgety:</strong><ul>
+<li><code>BannerSection</code>:<br />
+  Baner z logo i nagłówkiem.</li>
+<li><code>InfoSection</code>:<br />
+  Sekcja z informacjami o zespole i misji.</li>
+<li><code>InfoQuote</code>:<br />
+  Cytat motywacyjny.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="podsumowanie-widgetow">Podsumowanie widgetów</h2>
+<table>
+<thead>
+<tr>
+<th>Nazwa widgetu</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WelcomeStep</td>
+<td>Ekran powitalny z animacją i przyciskiem startu.</td>
+</tr>
+<tr>
+<td>NumberStep</td>
+<td>Formularz do wprowadzenia numeru telefonu.</td>
+</tr>
+<tr>
+<td>VerificationStep</td>
+<td>Weryfikacja kodu SMS, pola na cyfry, obsługa timera.</td>
+</tr>
+<tr>
+<td>SuccessStep</td>
+<td>Ekran sukcesu po rejestracji.</td>
+</tr>
+<tr>
+<td>CustomAppBar</td>
+<td>Pasek nagłówka z tłem, obrazem i tytułem.</td>
+</tr>
+<tr>
+<td>DailyBoxesSection</td>
+<td>Sekcja z dzisiejszymi boxami do odkrycia.</td>
+</tr>
+<tr>
+<td>PromotionHeader</td>
+<td>Baner promocyjny z animacjami Lottie.</td>
+</tr>
+<tr>
+<td>SharedBoxesSection</td>
+<td>Sekcja z ostatnio udostępnionymi boxami.</td>
+</tr>
+<tr>
+<td>HomeCategories</td>
+<td>Lista kategorii boxów.</td>
+</tr>
+<tr>
+<td>MayLikeSection</td>
+<td>Propozycje boxów dla użytkownika.</td>
+</tr>
+<tr>
+<td>OrderAgainSection</td>
+<td>Sekcja z boxami do ponownego zamówienia.</td>
+</tr>
+<tr>
+<td>CreatorTitle</td>
+<td>Nagłówek kreatora boxów.</td>
+</tr>
+<tr>
+<td>CreatorTypes</td>
+<td>Lista typów boxów do wyboru.</td>
+</tr>
+<tr>
+<td>CreatorTypeCard</td>
+<td>Karta pojedynczego typu boxa.</td>
+</tr>
+<tr>
+<td>CreatorProfileInfoPage</td>
+<td>Strona z informacjami o typie boxa i krokach kreatora.</td>
+</tr>
+<tr>
+<td>CreatorSteps</td>
+<td>Oś czasu z krokami kreatora boxów.</td>
+</tr>
+<tr>
+<td>CreatorTimelinePoint</td>
+<td>Punkt na osi czasu kreatora.</td>
+</tr>
+<tr>
+<td>CreatorTimelineDivider</td>
+<td>Separator osi czasu kreatora.</td>
+</tr>
+<tr>
+<td>CreatorButton</td>
+<td>Przycisk powrotu z ekranu informacyjnego kreatora.</td>
+</tr>
+<tr>
+<td>StepIndicator</td>
+<td>Pasek postępu w kreatorze boxów.</td>
+</tr>
+<tr>
+<td>RecipientStep</td>
+<td>Krok wyboru profilu odbiorcy boxa.</td>
+</tr>
+<tr>
+<td>OccasionStep</td>
+<td>Krok wyboru okazji.</td>
+</tr>
+<tr>
+<td>BudgetStep</td>
+<td>Krok wyboru budżetu.</td>
+</tr>
+<tr>
+<td>CycleStep</td>
+<td>Krok wyboru daty lub cyklu.</td>
+</tr>
+<tr>
+<td>CycleFrequencyWidgets</td>
+<td>Wybór częstotliwości cyklu dla boxów cyklicznych.</td>
+</tr>
+<tr>
+<td>CheckStep</td>
+<td>Podsumowanie wyborów w kreatorze boxów.</td>
+</tr>
+<tr>
+<td>SummaryBanner</td>
+<td>Baner podsumowujący z ikoną i opisem.</td>
+</tr>
+<tr>
+<td>SummaryItems</td>
+<td>Lista produktów w boxie z opcją usuwania.</td>
+</tr>
+<tr>
+<td>SummaryButtons</td>
+<td>Przycisk akcji w podsumowaniu boxa.</td>
+</tr>
+<tr>
+<td>SummaryPrice</td>
+<td>Wyświetlanie ceny boxa.</td>
+</tr>
+<tr>
+<td>MysteryBoxWidget</td>
+<td>Karta prezentująca box użytkownika.</td>
+</tr>
+<tr>
+<td>OrderCard</td>
+<td>Karta prezentująca zamówienie użytkownika.</td>
+</tr>
+<tr>
+<td>ProfileWidget</td>
+<td>Karta prezentująca profil użytkownika.</td>
+</tr>
+<tr>
+<td>ProfileInfoPage</td>
+<td>Szczegóły i edycja profilu użytkownika.</td>
+</tr>
+<tr>
+<td>NewProfilePage</td>
+<td>Formularz tworzenia nowego profilu.</td>
+</tr>
+<tr>
+<td>CenterSection</td>
+<td>Nagłówek sekcji w centrum użytkownika.</td>
+</tr>
+<tr>
+<td>CenterBoxesList</td>
+<td>Lista kafelków do podstron związanych z boxami/profilami/zamówieniami.</td>
+</tr>
+<tr>
+<td>CenterSettingsList</td>
+<td>Lista kafelków do ustawień aplikacji.</td>
+</tr>
+<tr>
+<td>CenterAccountList</td>
+<td>Lista kafelków do zarządzania kontem.</td>
+</tr>
+<tr>
+<td>CenterAboutList</td>
+<td>Lista kafelków z informacjami o aplikacji.</td>
+</tr>
+<tr>
+<td>CenterTile</td>
+<td>Kafelek nawigacyjny/akcji w centrum użytkownika.</td>
+</tr>
+<tr>
+<td>LogoutButton</td>
+<td>Przycisk wylogowania użytkownika.</td>
+</tr>
+<tr>
+<td>AppThemeWidget</td>
+<td>Zmiana motywu aplikacji.</td>
+</tr>
+<tr>
+<td>PreferencesWidget</td>
+<td>Preferencje użytkownika.</td>
+</tr>
+<tr>
+<td>InfoWidget</td>
+<td>Informacje o aplikacji w ustawieniach.</td>
+</tr>
+<tr>
+<td>BannerSection</td>
+<td>Baner z logo i nagłówkiem na stronie "O nas".</td>
+</tr>
+<tr>
+<td>InfoSection</td>
+<td>Sekcja z informacjami o zespole i misji.</td>
+</tr>
+<tr>
+<td>InfoQuote</td>
+<td>Cytat motywacyjny na stronie "O nas".</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Skopiowano do schowka", "clipboard.copy": "Kopiuj do schowka", "search.result.more.one": "1 wi\u0119cej na tej stronie", "search.result.more.other": "# wi\u0119cej na tej stronie", "search.result.none": "Brak wynik\u00f3w wyszukiwania", "search.result.one": "Wyniki wyszukiwania: 1", "search.result.other": "Wyniki wyszukiwania: #", "search.result.placeholder": "Zacznij pisa\u0107, aby szuka\u0107", "search.result.term.missing": "Brak", "select.version": "Wybierz wersj\u0119"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1766 @@
+
+<!doctype html>
+<html lang="pl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../../firestore/overview/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Funkcje - Dokumentacja aplikacji Unordered</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/colors.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="unordered" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dokumentacja-funkcji-chmurowych-cloud-functions" class="md-skip">
+          Przejdź do treści
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Nagłówek">
+    <a href="../.." title="Dokumentacja aplikacji Unordered" class="md-header__button md-logo" aria-label="Dokumentacja aplikacji Unordered" data-md-component="logo">
+      
+  <img src="../../icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dokumentacja aplikacji Unordered
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Funkcje
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Szukaj" placeholder="Szukaj" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Szukaj">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Wyczyść" aria-label="Wyczyść" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicjowanie wyszukiwania
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Zakładki" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Strona główna
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+  Firebase
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../firestore/overview/" class="md-tabs__link">
+          
+  
+  
+  Firestore
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../flutter/overview/" class="md-tabs__link">
+          
+  
+  
+  Flutter
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Nawigacja" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Dokumentacja aplikacji Unordered" class="md-nav__button md-logo" aria-label="Dokumentacja aplikacji Unordered" data-md-component="logo">
+      
+  <img src="../../icon.png" alt="logo">
+
+    </a>
+    Dokumentacja aplikacji Unordered
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strona główna
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firebase
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Firebase
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Funkcje
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funkcje
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Spis treści">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wprowadzenie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wprowadzenie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inzynieria-promptow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inżynieria promptów
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wybor-modelu-openai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór modelu OpenAI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-matchingjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł matching.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł matching.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createrandombox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createRandomBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createdailyboxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createDailyBoxes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-openaijs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł openai.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł openai.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-openairesponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja openAIResponse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-dailyopenairesponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja dailyOpenAIResponse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-randomopenairesponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja randomOpenAIResponse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-productsjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł products.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł products.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getproducts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getProducts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getproductbyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getProductById
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createproduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createProduct
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-profilesjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł profiles.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł profiles.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getprofiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getProfiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getprofilebyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getProfileById
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-storesjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł stores.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł stores.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getstores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getStores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getstorebyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getStoreById
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getstorebyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getStoreByName
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createStore
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bezpieczenstwo-i-autoryzacja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bezpieczeństwo i autoryzacja
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firestore
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firestore
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firestore/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Flutter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flutter/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Przegląd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flutter/widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Widgety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Spis treści">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wprowadzenie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wprowadzenie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inzynieria-promptow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inżynieria promptów
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wybor-modelu-openai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wybór modelu OpenAI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-matchingjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł matching.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł matching.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createrandombox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createRandomBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createdailyboxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createDailyBoxes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-openaijs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł openai.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł openai.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-openairesponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja openAIResponse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-dailyopenairesponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja dailyOpenAIResponse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-randomopenairesponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja randomOpenAIResponse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-productsjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł products.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł products.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getproducts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getProducts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getproductbyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getProductById
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createproduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createProduct
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-profilesjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł profiles.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł profiles.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getprofiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getProfiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getprofilebyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getProfileById
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modu-storesjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moduł stores.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduł stores.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getstores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getStores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getstorebyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getStoreById
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-getstorebyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja getStoreByName
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funkcja-createstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funkcja createStore
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bezpieczenstwo-i-autoryzacja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bezpieczeństwo i autoryzacja
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dokumentacja-funkcji-chmurowych-cloud-functions">Dokumentacja funkcji chmurowych (Cloud Functions)</h1>
+<h2 id="wprowadzenie">Wprowadzenie</h2>
+<p>W tej sekcji opisano funkcje chmurowe wykorzystywane w backendzie aplikacji Unordered. Funkcje te realizują logikę biznesową, komunikację z zewnętrznymi API oraz obsługę żądań z aplikacji mobilnej.</p>
+<h2 id="inzynieria-promptow">Inżynieria promptów</h2>
+<p>Przy inżynierii promptów uwaga była skupiona na wykorzystaniu najmniejszej liczby tokenów przy zachowaniu jak najlepszej jakości odpowiedzi.<br />
+Struktura wszystkich promptów to:  </p>
+<p><strong>ZASADA</strong> → <strong>OPIS ZASADY</strong></p>
+<p>Wiele opisów dotyczących jednej zasady jest oddzielonych przecinkiem.
+Koniec zasady jest oznaczony średnikiem.</p>
+<h2 id="wybor-modelu-openai">Wybór modelu OpenAI</h2>
+<p>Do generowania rekomendacji produktów wybrano model <strong>OpenAI o4-mini</strong>. Model ten działa w trybie „reasoning”, co pozwala na uwzględnienie wszystkich parametrów przekazanych przez użytkownika podczas generowania odpowiedzi. Dodatkowo, <strong>OpenAI o4-mini</strong> jest rozwiązaniem bardziej ekonomicznym w porównaniu do modeli <strong>GPT-4.1</strong> oraz <strong>OpenAI o3</strong>, zapewniając jednocześnie wysoką jakość generowanych wyników.</p>
+<h2 id="modu-matchingjs">Moduł <code>matching.js</code></h2>
+<p>Moduł <code>matching.js</code> odpowiada za logikę tworzenia boxów dla użytkowników, zarówno na podstawie profilu, jak i w trybie losowym. Zawiera także funkcje do generowania codziennych boxów.</p>
+<h3 id="funkcja-createbox">Funkcja <code>createBox</code></h3>
+<p>Tworzy box na podstawie wybranego profilu użytkownika, budżetu i okazji. Wykorzystuje OpenAI do doboru produktów.</p>
+<p>Sprawdza, czy użytkownik jest zalogowany i posiada odpowiednie uprawnienia do wywołania funkcji.
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">request</span><span class="p">.</span><span class="nx">auth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">functions</span><span class="p">.</span><span class="nx">https</span><span class="p">.</span><span class="nx">HttpsError</span><span class="p">(</span>
+<span class="w">      </span><span class="s2">&quot;unauthenticated&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;The function must be called while authenticated.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// ...pobranie danych profilu i produktów...</span>
+</code></pre></div>
+Tworzy prompt na podstawie pobranych danych, który zostanie przesłany do modelu OpenAI.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Profile: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">profileData</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="s2">&quot;\nBudget: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">budget</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="s2">&quot;\nOccasion: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">occasion</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="s2">&quot;\nProducts: &quot;</span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">productsData</span><span class="p">);</span>
+</code></pre></div>
+Wysyła prompt i token autoryzacyjny użytkownika do <a href="#funkcja-openairesponse">funkcji openAIResponse</a>, która generuje rekomendacje produktów.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">openaiResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">&quot;&lt;link do cloud funkcji openAIResponse&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Authorization</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+Przetwarza odpowiedź z OpenAI, zapisuje nowy box w bazie danych i zwraca identyfikator boxa oraz status operacji.
+<div class="highlight"><pre><span></span><code><span class="c1">// ...obsługa odpowiedzi...</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">boxRef</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">products</span><span class="o">:</span><span class="w"> </span><span class="nx">selectedProducts</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">createdInMillis</span><span class="o">:</span><span class="w"> </span><span class="nx">createdInMillis</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">isPeriodical</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">plannedDate</span><span class="o">:</span><span class="w"> </span><span class="nx">plannedDate</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">price</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">cycleFreq</span><span class="o">:</span><span class="w"> </span><span class="nx">cycleFreq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">budget</span><span class="o">:</span><span class="w"> </span><span class="nx">budget</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">occasion</span><span class="o">:</span><span class="w"> </span><span class="nx">occasion</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">profileId</span><span class="o">:</span><span class="w"> </span><span class="nx">profileRef</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nx">boxId</span><span class="o">:</span><span class="w"> </span><span class="nx">boxRef</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">};</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-createrandombox">Funkcja <code>createRandomBox</code></h3>
+<p>Tworzy box z losowo dobranymi produktami (bez profilu i okazji).</p>
+<p>Sprawdza, czy użytkownik jest zalogowany.
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">request</span><span class="p">.</span><span class="nx">auth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">functions</span><span class="p">.</span><span class="nx">https</span><span class="p">.</span><span class="nx">HttpsError</span><span class="p">(</span>
+<span class="w">      </span><span class="s2">&quot;unauthenticated&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;The function must be called while authenticated.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// ...pobranie produktów...</span>
+</code></pre></div>
+Tworzy prompt zawierający tylko listę produktów.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Products: &quot;</span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">productsData</span><span class="p">);</span>
+</code></pre></div>
+Wysyła prompt i token autoryzacyjny użytkownika do <a href="#funkcja-randomopenairesponse">funkcji randomOpenAIResponse</a>, która generuje losowe rekomendacje produktów.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">openaiResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">&quot;&lt;link do cloud funkcji randomOpenAIResponse&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Authorization</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+Przetwarza odpowiedź i zapisuje nowy box z losowymi produktami.
+<div class="highlight"><pre><span></span><code><span class="c1">// ...obsługa odpowiedzi...</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">boxRef</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">products</span><span class="o">:</span><span class="w"> </span><span class="nx">selectedProducts</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">createdInMillis</span><span class="o">:</span><span class="w"> </span><span class="nx">createdInMillis</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">isPeriodical</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">plannedDate</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">price</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">cycleFreq</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">budget</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">occasion</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">profileId</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nx">boxId</span><span class="o">:</span><span class="w"> </span><span class="nx">boxRef</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">};</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-createdailyboxes">Funkcja <code>createDailyBoxes</code></h3>
+<p>Tworzy codziennie zestaw boxów tematycznych (wykonywana cyklicznie przez scheduler).</p>
+<p>Funkcja uruchamiana automatycznie każdego dnia o 02:00 (UTC).
+<div class="highlight"><pre><span></span><code><span class="nx">exports</span><span class="p">.</span><span class="nx">createDailyBoxes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">onSchedule</span><span class="p">(</span><span class="s2">&quot;every day 02:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ...losowanie tematów i budżetów...</span>
+</code></pre></div>
+Dla każdego z 5 tematów generuje prompt i wywołuje <a href="#funkcja-dailyopenairesponse">funkcję dailyOpenAIResponse</a> do wygenerowania rekomendacji produktów.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ...generowanie promptu i wywołanie OpenAI...</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">dailyRef</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">boxData</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h2 id="modu-openaijs">Moduł <code>openai.js</code></h2>
+<p>Moduł <code>openai.js</code> odpowiada za komunikację z API OpenAI oraz generowanie rekomendacji produktów na podstawie promptów przesyłanych z aplikacji lub innych funkcji backendu. Zawiera funkcje obsługujące różne scenariusze generowania boxów.</p>
+<h3 id="funkcja-openairesponse">Funkcja <code>openAIResponse</code></h3>
+<p>Wywołuje model OpenAI na podstawie promptu z danymi profilu, budżetu i okazji. Zwraca listę wybranych produktów w formacie JSON.</p>
+<p>Sprawdza autoryzację oraz obecność promptu w żądaniu.
+<div class="highlight"><pre><span></span><code><span class="c1">// ...autoryzacja...</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">prompt</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">prompt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Prompt is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Tworzy zapytanie do modelu OpenAI z określonymi zasadami doboru produktów.</p>
+<p>Struktura promptu jest opisana w sekcji <a href="#inzynieria-promptow">Inżynieria promptów</a>.</p>
+<p>Szczegóły związane z wyborem modelu OpenAI i jego właściwościami są opisane w sekcji <a href="#wybor-modelu-openai">Wybór modelu OpenAI</a>.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">completion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">openai</span><span class="p">.</span><span class="nx">chat</span><span class="p">.</span><span class="nx">completions</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;o4-mini-2025-04-16&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">messages</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="sb">`Zasady:</span>
+<span class="sb">ANALIZA-&gt;Uwzględnij zainteresowania, okazję, i budżet,</span>
+<span class="sb">    Ignoruj niepowiązane kategorie,</span>
+<span class="sb">    jeśli brak pasujących produktów, wybierz 1 uniwersalny;</span>
+
+<span class="sb">RÓŻNORODNOŚĆ-&gt;Unikaj powtórzeń, dobieraj różne kategorie;</span>
+
+<span class="sb">BUDŻET-&gt;Nigdy nie przekraczaj budżetu!, Nie schodź znacznie poniżej,</span>
+<span class="sb">    Dany budżet dotyczy SUMY produktów, nie pojedynczego!;</span>
+
+<span class="sb">ODPOWIEDŹ-&gt;Zwróć TYLKO JSON array z ID produktów,</span>
+<span class="sb">    bez komentarzy, lista niepusta;`</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="sb">`Zwróć TYLKO JSON array z wybranymi ID produktów.</span>
+<span class="sb">      Dane wejściowe: </span><span class="si">${</span><span class="nx">prompt</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">response_format</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;json_object&quot;</span><span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div>
+Zwraca odpowiedź z modelu OpenAI do klienta.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">responseText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">completion</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">;</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">response</span><span class="o">:</span><span class="w"> </span><span class="nx">responseText</span><span class="p">});</span>
+<span class="c1">// ...obsługa błędów...</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-dailyopenairesponse">Funkcja <code>dailyOpenAIResponse</code></h3>
+<p>Generuje rekomendacje produktów dla codziennych boxów tematycznych.</p>
+<p>Sprawdza autoryzację oraz obecność promptu w żądaniu.
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">prompt</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">prompt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Prompt is required&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+Tworzy zapytanie do modelu OpenAI z zasadami doboru produktów uwzględniającymi tematykę boxa.</p>
+<p>Struktura promptu jest opisana w sekcji <a href="#inzynieria-promptow">Inżynieria promptów</a>.</p>
+<p>Szczegóły związane z wyborem modelu OpenAI i jego właściwościami są opisane w sekcji <a href="#wybor-modelu-openai">Wybór modelu OpenAI</a>.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">completion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">openai</span><span class="p">.</span><span class="nx">chat</span><span class="p">.</span><span class="nx">completions</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;o4-mini-2025-04-16&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">messages</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="sb">`Zasady:</span>
+<span class="sb">DOBÓR-&gt;Uwzględnij temat, unikaj innych kategorii,</span>
+<span class="sb">    Wybierz 1 uniwersalny, jeśli brak pasujących produktów;</span>
+
+<span class="sb">RÓŻNORODNOŚĆ-&gt;Unikaj powtórzeń!, dobieraj różne kategorie;</span>
+
+<span class="sb">BUDŻET-&gt;Nigdy nie przekraczaj budżetu!, Nie schodź znacznie poniżej,</span>
+<span class="sb">    Dany budżet dotyczy SUMY produktów, nie pojedynczego!;</span>
+
+<span class="sb">ODPOWIEDŹ-&gt;TYLKO JSON array z ID produktów,</span>
+<span class="sb">    bez komentarzy, lista niepusta;`</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="sb">`Zwróć TYLKO JSON array z wybranymi ID produktów.</span>
+<span class="sb">      Dane wejściowe: </span><span class="si">${</span><span class="nx">prompt</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">response_format</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;json_object&quot;</span><span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div>
+Zwraca odpowiedź z modelu OpenAI do klienta.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">responseText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">completion</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">;</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">response</span><span class="o">:</span><span class="w"> </span><span class="nx">responseText</span><span class="p">});</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ...obsługa błędów...</span>
+<span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-randomopenairesponse">Funkcja <code>randomOpenAIResponse</code></h3>
+<p>Generuje losowe rekomendacje produktów do boxa bez profilu i okazji.</p>
+<p>Sprawdza autoryzację oraz obecność promptu w żądaniu.
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ...autoryzacja...</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">prompt</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">prompt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Prompt is required&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+Tworzy zapytanie do modelu OpenAI z zasadami doboru produktów w trybie losowym.</p>
+<p>Struktura promptu jest opisana w sekcji <a href="#inzynieria-promptow">Inżynieria promptów</a>.</p>
+<p>Szczegóły związane z wyborem modelu OpenAI i jego właściwościami są opisane w sekcji <a href="#wybor-modelu-openai">Wybór modelu OpenAI</a>.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">completion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">openai</span><span class="p">.</span><span class="nx">chat</span><span class="p">.</span><span class="nx">completions</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;o4-mini-2025-04-16&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">messages</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="sb">`Zasady:</span>
+<span class="sb">LOSOWOŚĆ-&gt;Wybierz losowe przedmioty, maks. 8,</span>
+<span class="sb">    Unikaj powtórzeń, lista niepusta;</span>
+
+<span class="sb">RÓŻNORODNOŚĆ-&gt;Dobieraj różne kategorie;</span>
+
+<span class="sb">BUDŻET-&gt;Utrzymaj realistyczny budżet;</span>
+
+<span class="sb">ODPOWIEDŹ-&gt;TYLKO JSON array z ID produktów, bez komentarzy,</span>
+<span class="sb">    lista niepusta;`</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="sb">`Zwróć TYLKO JSON array z wybranymi ID produktów.</span>
+<span class="sb">      Dane wejściowe: </span><span class="si">${</span><span class="nx">prompt</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">response_format</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;json_object&quot;</span><span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div>
+Zwraca odpowiedź z modelu OpenAI do klienta.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">responseText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">completion</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">;</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">response</span><span class="o">:</span><span class="w"> </span><span class="nx">responseText</span><span class="p">});</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ...obsługa błędów...</span>
+<span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h2 id="modu-productsjs">Moduł <code>products.js</code></h2>
+<p>Moduł <code>products.js</code> odpowiada za zarządzanie produktami w bazie danych Firestore. Umożliwia pobieranie listy produktów, pobieranie produktu po ID oraz dodawanie nowych produktów (w tym losowych).</p>
+<h3 id="funkcja-getproducts">Funkcja <code>getProducts</code></h3>
+<p>Zwraca listę wszystkich produktów zapisanych w kolekcji <code>products</code>.</p>
+<p>Pobiera referencję do kolekcji produktów.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">productsRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;products&quot;</span><span class="p">);</span>
+</code></pre></div>
+Pobiera wszystkie dokumenty z kolekcji, mapuje je na tablicę obiektów z polem <code>id</code> i danymi produktu.
+<div class="highlight"><pre><span></span><code><span class="nx">productsRef</span><span class="p">.</span><span class="nx">get</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">snapshot</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">products</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">      </span><span class="nx">snapshot</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">products</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+<span class="w">          </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">          </span><span class="p">...</span><span class="nx">doc</span><span class="p">.</span><span class="nx">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">products</span><span class="p">);</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas pobierania produktów.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error fetching products:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-getproductbyid">Funkcja <code>getProductById</code></h3>
+<p>Zwraca pojedynczy produkt na podstawie przekazanego ID.</p>
+<p>Pobiera identyfikator produktu z zapytania i sprawdza jego obecność.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">productId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">productId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Product ID is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Pobiera referencję do dokumentu produktu o podanym ID.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">productRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;products&quot;</span><span class="p">).</span><span class="nx">doc</span><span class="p">(</span><span class="nx">productId</span><span class="p">);</span>
+</code></pre></div>
+Pobiera dokument produktu i zwraca go w odpowiedzi, jeśli istnieje.
+<div class="highlight"><pre><span></span><code><span class="nx">productRef</span><span class="p">.</span><span class="nx">get</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">doc</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">404</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Product not found&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+<span class="w">          </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">          </span><span class="p">...</span><span class="nx">doc</span><span class="p">.</span><span class="nx">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas pobierania produktu.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error fetching product:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-createproduct">Funkcja <code>createProduct</code></h3>
+<p>Dodaje nowy produkt do kolekcji <code>products</code> na podstawie danych przesłanych w body żądania.</p>
+<p>Pobiera dane produktu z ciała żądania i sprawdza ich obecność.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">product</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Product is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Dodaje nowy dokument do kolekcji produktów.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">productsRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;products&quot;</span><span class="p">);</span>
+
+<span class="nx">productsRef</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">product</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">201</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+<span class="w">        </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">        </span><span class="p">...</span><span class="nx">product</span><span class="p">,</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas dodawania produktu.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error creating product:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h2 id="modu-profilesjs">Moduł <code>profiles.js</code></h2>
+<p>Moduł <code>profiles.js</code> odpowiada za zarządzanie profilami użytkowników w bazie danych Firestore. Umożliwia pobieranie wszystkich profili użytkownika oraz pobieranie pojedynczego profilu po ID.</p>
+<h3 id="funkcja-getprofiles">Funkcja <code>getProfiles</code></h3>
+<p>Zwraca listę wszystkich profili użytkownika na podstawie przekazanego <code>userId</code>.</p>
+<p>Pobiera identyfikator użytkownika z zapytania i sprawdza jego obecność.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">usersRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">userId</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">userId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;User ID is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Pobiera wszystkie profile użytkownika z podkolekcji <code>profiles</code>.
+<div class="highlight"><pre><span></span><code><span class="nx">usersRef</span><span class="p">.</span><span class="nx">doc</span><span class="p">(</span><span class="nx">userId</span><span class="p">).</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;profiles&quot;</span><span class="p">).</span><span class="nx">get</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">snapshot</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">profiles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">      </span><span class="nx">snapshot</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">profiles</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+<span class="w">          </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">          </span><span class="p">...</span><span class="nx">doc</span><span class="p">.</span><span class="nx">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">profiles</span><span class="p">);</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas pobierania profili.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error fetching profiles:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-getprofilebyid">Funkcja <code>getProfileById</code></h3>
+<p>Zwraca pojedynczy profil użytkownika na podstawie przekazanych <code>userId</code> i <code>profileId</code>.</p>
+<p>Pobiera identyfikatory użytkownika i profilu z zapytania oraz sprawdza ich obecność.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">userId</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">profileId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">profileId</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">userId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;User ID is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">profileId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Profile ID is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Pobiera referencję do dokumentu profilu użytkownika.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">profileRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">doc</span><span class="p">(</span><span class="nx">userId</span><span class="p">).</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;profiles&quot;</span><span class="p">).</span><span class="nx">doc</span><span class="p">(</span><span class="nx">profileId</span><span class="p">);</span>
+</code></pre></div>
+Pobiera dokument profilu i zwraca go w odpowiedzi, jeśli istnieje.
+<div class="highlight"><pre><span></span><code><span class="nx">profileRef</span><span class="p">.</span><span class="nx">get</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">doc</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">404</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Profile not found&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+<span class="w">          </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">          </span><span class="p">...</span><span class="nx">doc</span><span class="p">.</span><span class="nx">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas pobierania profilu.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error fetching profile:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h2 id="modu-storesjs">Moduł <code>stores.js</code></h2>
+<p>Moduł <code>stores.js</code> odpowiada za zarządzanie sklepami w bazie danych Firestore. Umożliwia pobieranie listy sklepów, pobieranie sklepu po ID lub nazwie oraz dodawanie nowych sklepów (w tym losowych).</p>
+<h3 id="funkcja-getstores">Funkcja <code>getStores</code></h3>
+<p>Zwraca listę wszystkich sklepów zapisanych w kolekcji <code>stores</code>.</p>
+<p>Pobiera referencję do kolekcji sklepów.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">storesRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;stores&quot;</span><span class="p">);</span>
+</code></pre></div>
+Pobiera wszystkie dokumenty z kolekcji, mapuje je na tablicę obiektów z polem <code>id</code> i danymi sklepu.
+<div class="highlight"><pre><span></span><code><span class="nx">storesRef</span><span class="p">.</span><span class="nx">get</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">snapshot</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">stores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">      </span><span class="nx">snapshot</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">stores</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+<span class="w">          </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">          </span><span class="p">...</span><span class="nx">doc</span><span class="p">.</span><span class="nx">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">stores</span><span class="p">);</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas pobierania sklepów.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error fetching stores:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-getstorebyid">Funkcja <code>getStoreById</code></h3>
+<p>Zwraca pojedynczy sklep na podstawie przekazanego ID.</p>
+<p>Pobiera identyfikator sklepu z zapytania i sprawdza jego obecność.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">storeId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">storeId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Store ID is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Pobiera referencję do dokumentu sklepu o podanym ID.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">storesRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;stores&quot;</span><span class="p">).</span><span class="nx">doc</span><span class="p">(</span><span class="nx">storeId</span><span class="p">);</span>
+</code></pre></div>
+Pobiera dokument sklepu i zwraca go w odpowiedzi, jeśli istnieje.
+<div class="highlight"><pre><span></span><code><span class="nx">storesRef</span><span class="p">.</span><span class="nx">get</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">doc</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">404</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Store not found&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+<span class="w">          </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">          </span><span class="p">...</span><span class="nx">doc</span><span class="p">.</span><span class="nx">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas pobierania sklepu.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error fetching store:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-getstorebyname">Funkcja <code>getStoreByName</code></h3>
+<p>Zwraca sklep lub sklepy na podstawie przekazanej nazwy.</p>
+<p>Pobiera nazwę sklepu z zapytania i sprawdza jej obecność.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">storeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">storeName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Store name is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Wyszukuje sklepy o podanej nazwie w kolekcji.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">storesRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;stores&quot;</span><span class="p">);</span>
+<span class="nx">storesRef</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;==&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">storeName</span><span class="p">).</span><span class="nx">get</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">snapshot</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">stores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">      </span><span class="nx">snapshot</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">stores</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+<span class="w">          </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">          </span><span class="p">...</span><span class="nx">doc</span><span class="p">.</span><span class="nx">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">stores</span><span class="p">);</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas pobierania sklepów.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error fetching stores:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h3 id="funkcja-createstore">Funkcja <code>createStore</code></h3>
+<p>Dodaje nowy sklep do kolekcji <code>stores</code> na podstawie danych przesłanych w body żądania.</p>
+<p>Pobiera dane sklepu z ciała żądania i sprawdza ich obecność.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">store</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">400</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Store is required&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Dodaje nowy dokument do kolekcji sklepów.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">storeRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admin</span><span class="p">.</span><span class="nx">firestore</span><span class="p">().</span><span class="nx">collection</span><span class="p">(</span><span class="s2">&quot;stores&quot;</span><span class="p">);</span>
+
+<span class="nx">storeRef</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">store</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">201</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+<span class="w">        </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">        </span><span class="p">...</span><span class="nx">store</span><span class="p">,</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+Obsługuje błędy podczas dodawania sklepu.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error creating product:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h2 id="bezpieczenstwo-i-autoryzacja">Bezpieczeństwo i autoryzacja</h2>
+<p>Wszystkie funkcje chmurowe w projekcie Unordered zostały zaprojektowane z uwzględnieniem bezpieczeństwa i kontroli dostępu. Poniżej opisano główne mechanizmy zabezpieczeń stosowane w funkcjach backendowych:</p>
+<ul>
+<li>
+<p><strong>Weryfikacja autoryzacji użytkownika:</strong><br />
+  Funkcje, które wykonują operacje na danych użytkownika (np. tworzenie boxów, pobieranie profili, dodawanie produktów), wymagają obecności ważnego tokena autoryzacyjnego. Przed wykonaniem logiki funkcji sprawdzana jest autoryzacja użytkownika, a w przypadku jej braku zwracany jest odpowiedni błąd (np. <code>unauthenticated</code> lub kod HTTP 400/401).</p>
+</li>
+<li>
+<p><strong>Walidacja danych wejściowych:</strong><br />
+  Każda funkcja sprawdza obecność wymaganych parametrów wejściowych (np. <code>userId</code>, <code>profileId</code>, <code>productId</code>, <code>storeId</code>). W przypadku braku wymaganych danych funkcja natychmiast przerywa działanie i zwraca błąd.</p>
+</li>
+<li>
+<p><strong>Ograniczenie dostępu do danych:</strong><br />
+  Funkcje umożliwiają dostęp wyłącznie do danych powiązanych z zalogowanym użytkownikiem (np. profile, boxy). Nie jest możliwe pobranie lub modyfikacja danych innych użytkowników bez odpowiednich uprawnień.</p>
+</li>
+<li>
+<p><strong>Obsługa błędów i logowanie:</strong><br />
+  Wszystkie funkcje posiadają obsługę błędów oraz logowanie nieudanych operacji, co pozwala na monitorowanie potencjalnych nadużyć i szybkie reagowanie na incydenty.</p>
+</li>
+<li>
+<p><strong>Bezpieczna komunikacja z zewnętrznymi API:</strong><br />
+  Wywołania do zewnętrznych usług (np. OpenAI) są realizowane z użyciem tokenów autoryzacyjnych użytkownika oraz bezpiecznych protokołów komunikacyjnych.</p>
+</li>
+<li>
+<p><strong>Dodatkowe zabezpieczenia (założenie):</strong><br />
+  Zakłada się, że w środowisku produkcyjnym funkcje są dodatkowo chronione przez reguły bezpieczeństwa Firestore, ograniczenia sieciowe oraz mechanizmy rate limiting, co uniemożliwia nieautoryzowany dostęp i nadużycia.</p>
+</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Skopiowano do schowka", "clipboard.copy": "Kopiuj do schowka", "search.result.more.one": "1 wi\u0119cej na tej stronie", "search.result.more.other": "# wi\u0119cej na tej stronie", "search.result.none": "Brak wynik\u00f3w wyszukiwania", "search.result.one": "Wyniki wyszukiwania: 1", "search.result.other": "Wyniki wyszukiwania: #", "search.result.placeholder": "Zacznij pisa\u0107, aby szuka\u0107", "search.result.term.missing": "Brak", "select.version": "Wybierz wersj\u0119"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
