@@ -1,28 +1,32 @@
 # Dokumentacja Backend (Firebase)
 
-## 1. Wprowadzenie
+## Wprowadzenie
 
 W tej sekcji opisano backend aplikacji Unordered, który jest oparty na Firebase, Firestore, Google Cloud Functions oraz OpenAI API.
 Opis zawiera informacje o strukturze projektu, wymaganiach systemowych, sposobie wdrożenia oraz głównych funkcjonalnościach.
 
-## 2. Wymagania systemowe
+## Wymagania systemowe
 
 - Node.js (zalecana wersja zgodna z Google Cloud Functions)
 - Google Cloud SDK
 - Konto Google Cloud Platform z aktywnym projektem Firebase
 
-## 3. Wdrożenie
+## Wysokopoziomowy diagram architektury
+
+<img src="../images/unordered.c4.png" alt="Diagram architektury backendu Unordered" width="800">
+
+## Wdrożenie
 
 1. Przejdź do katalogu `functions/`.
 2. Zainstaluj zależności:  
    `npm install`
-3. Skonfiguruj zmienne środowiskowe i klucze API [patrz sekcja 6](#6-konfiguracja-srodowiska).
+3. Skonfiguruj zmienne środowiskowe i klucze API [patrz sekcja 6](#konfiguracja-srodowiska).
 4. Uruchom funkcje lokalnie:  
    `firebase emulators:start`  
    lub wdroż do chmury:  
    `firebase deploy --only functions`
 
-## 4. Struktura projektu
+## Struktura projektu
 
 Główne katalogi i pliki:
 
@@ -36,22 +40,22 @@ Główne katalogi i pliki:
 - `package.json` – zależności projektu
 - `firebase.json` – plik konfiguracyjny Firebase
 
-## 5. Główne zależności
+## Główne zależności
 
 - **Firebase Admin SDK** – dostęp do Firestore, autoryzacja, zarządzanie użytkownikami
 - **Google Cloud Functions SDK** – definiowanie i obsługa funkcji chmurowych
 - **Axios** – wykonywanie zapytań HTTP do zewnętrznych API (np. OpenAI)
 - **OpenAI API** – generowanie rekomendacji produktów
 
-## 6. Konfiguracja środowiska
+## Konfiguracja środowiska
 
 Konfiguracja środowiska obejmuje ustawienie zmiennych środowiskowych, takich jak klucze API do usług zewnętrznych (np. OpenAI), oraz odpowiednich uprawnień konta serwisowego Google Cloud do korzystania z Firestore i Cloud Functions. Klucze i sekrety przechowywane są w pliku `.env.local` który nie jest dołączany do repozytorium oraz jest bezpiecznie przechowywany w Firebase.
 - **Przykładowy plik `.env.local`:**
   ```plaintext
   OPENAI_API_KEY=klucz_do_openai
   ```
-
-## 7. Opis funkcjonalności
+  
+## Opis funkcjonalności
 
 - **Tworzenie i obsługa boxów:**  
   Użytkownik może utworzyć box na podstawie profilu, budżetu i okazji lub wygenerować box losowy. System korzysta z OpenAI do doboru produktów.

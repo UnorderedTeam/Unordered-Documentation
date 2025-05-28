@@ -1,14 +1,27 @@
 # Dokumentacja funkcji chmurowych (Cloud Functions)
 
-## 1. Wprowadzenie
+## Wprowadzenie
 
 W tej sekcji opisano funkcje chmurowe wykorzystywane w backendzie aplikacji Unordered. Funkcje te realizują logikę biznesową, komunikację z zewnętrznymi API oraz obsługę żądań z aplikacji mobilnej.
 
-## 2. Moduł `matching.js`
+## Inżynieria promptów
+Przy inżynierii promptów uwaga była skupiona na wykorzystaniu najmniejszej liczby tokenów przy zachowaniu jak najlepszej jakości odpowiedzi.  
+Struktura wszystkich promptów to:  
+
+**ZASADA** → **OPIS ZASADY**
+
+Wiele opisów dotyczących jednej zasady jest oddzielonych przecinkiem.
+Koniec zasady jest oznaczony średnikiem.
+
+## Wybór modelu OpenAI
+
+Do generowania rekomendacji produktów wybrano model **OpenAI o4-mini**. Model ten działa w trybie „reasoning”, co pozwala na uwzględnienie wszystkich parametrów przekazanych przez użytkownika podczas generowania odpowiedzi. Dodatkowo, **OpenAI o4-mini** jest rozwiązaniem bardziej ekonomicznym w porównaniu do modeli **GPT-4.1** oraz **OpenAI o3**, zapewniając jednocześnie wysoką jakość generowanych wyników.
+
+## Moduł `matching.js`
 
 Moduł `matching.js` odpowiada za logikę tworzenia boxów dla użytkowników, zarówno na podstawie profilu, jak i w trybie losowym. Zawiera także funkcje do generowania codziennych boxów.
 
-### 2.1. Funkcja `createBox`
+### Funkcja `createBox`
 
 Tworzy box na podstawie wybranego profilu użytkownika, budżetu i okazji. Wykorzystuje OpenAI do doboru produktów.
 
@@ -29,10 +42,10 @@ const prompt = "Profile: " + JSON.stringify(profileData) +
               "\nOccasion: " + JSON.stringify(occasion) +
               "\nProducts: "+ JSON.stringify(productsData);
 ```
-Wysyła prompt i token autoryzacyjny użytkownika do [funkcji openAIResponse](#31-funkcja-openairesponse), która generuje rekomendacje produktów.
+Wysyła prompt i token autoryzacyjny użytkownika do [funkcji openAIResponse](#funkcja-openairesponse), która generuje rekomendacje produktów.
 ```javascript
 const openaiResponse = await axios.post(
-    "https://openai-openairesponse-dp75kddpea-ew.a.run.app/",
+    "<link do cloud funkcji openAIResponse>",
     { prompt },
     { headers: { Authorization: `Bearer ${request.auth.token}` } }
 );
@@ -58,7 +71,7 @@ return {boxId: boxRef.id, success: true};
 
 ---
 
-### 2.2. Funkcja `createRandomBox`
+### Funkcja `createRandomBox`
 
 Tworzy box z losowo dobranymi produktami (bez profilu i okazji).
 
@@ -76,10 +89,10 @@ Tworzy prompt zawierający tylko listę produktów.
 ```javascript
 const prompt = "Products: "+ JSON.stringify(productsData);
 ```
-Wysyła prompt i token autoryzacyjny użytkownika do [funkcji randomOpenAIResponse](#33-funkcja-randomopenairesponse), która generuje losowe rekomendacje produktów.
+Wysyła prompt i token autoryzacyjny użytkownika do [funkcji randomOpenAIResponse](#funkcja-randomopenairesponse), która generuje losowe rekomendacje produktów.
 ```javascript
 const openaiResponse = await axios.post(
-    "https://openai-randomopenairesponse-dp75kddpea-ew.a.run.app/",
+    "<link do cloud funkcji randomOpenAIResponse>",
     { prompt },
     { headers: { Authorization: `Bearer ${request.auth.token}` } }
 );
@@ -105,7 +118,7 @@ return {boxId: boxRef.id, success: true};
 
 ---
 
-### 2.3. Funkcja `createDailyBoxes`
+### Funkcja `createDailyBoxes`
 
 Tworzy codziennie zestaw boxów tematycznych (wykonywana cyklicznie przez scheduler).
 
@@ -114,7 +127,7 @@ Funkcja uruchamiana automatycznie każdego dnia o 02:00 (UTC).
 exports.createDailyBoxes = onSchedule("every day 02:00", async (event) => {
   // ...losowanie tematów i budżetów...
 ```
-Dla każdego z 5 tematów generuje prompt i wywołuje [funkcję dailyOpenAIResponse](#32-funkcja-dailyopenairesponse) do wygenerowania rekomendacji produktów.
+Dla każdego z 5 tematów generuje prompt i wywołuje [funkcję dailyOpenAIResponse](#funkcja-dailyopenairesponse) do wygenerowania rekomendacji produktów.
 ```javascript
 for (let i=0; i<5; i++) {
   // ...generowanie promptu i wywołanie OpenAI...
@@ -125,11 +138,11 @@ for (let i=0; i<5; i++) {
 
 ---
 
-## 3. Moduł `openai.js`
+## Moduł `openai.js`
 
 Moduł `openai.js` odpowiada za komunikację z API OpenAI oraz generowanie rekomendacji produktów na podstawie promptów przesyłanych z aplikacji lub innych funkcji backendu. Zawiera funkcje obsługujące różne scenariusze generowania boxów.
 
-### 3.1. Funkcja `openAIResponse`
+### Funkcja `openAIResponse`
 
 Wywołuje model OpenAI na podstawie promptu z danymi profilu, budżetu i okazji. Zwraca listę wybranych produktów w formacie JSON.
 
@@ -143,6 +156,11 @@ if (!prompt) {
 }
 ```
 Tworzy zapytanie do modelu OpenAI z określonymi zasadami doboru produktów.
+
+Struktura promptu jest opisana w sekcji [Inżynieria promptów](#inzynieria-promptow).
+
+Szczegóły związane z wyborem modelu OpenAI i jego właściwościami są opisane w sekcji [Wybór modelu OpenAI](#wybor-modelu-openai).
+
 ```javascript
 const completion = await openai.chat.completions.create({
   model: "o4-mini-2025-04-16",
@@ -180,7 +198,7 @@ res.status(200).json({response: responseText});
 
 ---
 
-### 3.2. Funkcja `dailyOpenAIResponse`
+### Funkcja `dailyOpenAIResponse`
 
 Generuje rekomendacje produktów dla codziennych boxów tematycznych.
 
@@ -194,6 +212,11 @@ try {
   }
 ```
 Tworzy zapytanie do modelu OpenAI z zasadami doboru produktów uwzględniającymi tematykę boxa.
+
+Struktura promptu jest opisana w sekcji [Inżynieria promptów](#inzynieria-promptow).
+
+Szczegóły związane z wyborem modelu OpenAI i jego właściwościami są opisane w sekcji [Wybór modelu OpenAI](#wybor-modelu-openai).
+
 ```javascript
 const completion = await openai.chat.completions.create({
   model: "o4-mini-2025-04-16",
@@ -233,7 +256,7 @@ res.status(200).json({response: responseText});
 
 ---
 
-### 3.3. Funkcja `randomOpenAIResponse`
+### Funkcja `randomOpenAIResponse`
 
 Generuje losowe rekomendacje produktów do boxa bez profilu i okazji.
 
@@ -248,6 +271,11 @@ try {
   }
 ```
 Tworzy zapytanie do modelu OpenAI z zasadami doboru produktów w trybie losowym.
+
+Struktura promptu jest opisana w sekcji [Inżynieria promptów](#inzynieria-promptow).
+
+Szczegóły związane z wyborem modelu OpenAI i jego właściwościami są opisane w sekcji [Wybór modelu OpenAI](#wybor-modelu-openai).
+
 ```javascript
 const completion = await openai.chat.completions.create({
   model: "o4-mini-2025-04-16",
@@ -286,11 +314,11 @@ res.status(200).json({response: responseText});
 
 ---
 
-## 4. Moduł `products.js`
+## Moduł `products.js`
 
 Moduł `products.js` odpowiada za zarządzanie produktami w bazie danych Firestore. Umożliwia pobieranie listy produktów, pobieranie produktu po ID oraz dodawanie nowych produktów (w tym losowych).
 
-### 4.1. Funkcja `getProducts`
+### Funkcja `getProducts`
 
 Zwraca listę wszystkich produktów zapisanych w kolekcji `products`.
 
@@ -322,7 +350,7 @@ Obsługuje błędy podczas pobierania produktów.
 
 ---
 
-### 4.2. Funkcja `getProductById`
+### Funkcja `getProductById`
 
 Zwraca pojedynczy produkt na podstawie przekazanego ID.
 
@@ -363,7 +391,7 @@ Obsługuje błędy podczas pobierania produktu.
 
 ---
 
-### 4.3. Funkcja `createProduct`
+### Funkcja `createProduct`
 
 Dodaje nowy produkt do kolekcji `products` na podstawie danych przesłanych w body żądania.
 
@@ -398,11 +426,11 @@ Obsługuje błędy podczas dodawania produktu.
 
 ---
 
-## 5. Moduł `profiles.js`
+## Moduł `profiles.js`
 
 Moduł `profiles.js` odpowiada za zarządzanie profilami użytkowników w bazie danych Firestore. Umożliwia pobieranie wszystkich profili użytkownika oraz pobieranie pojedynczego profilu po ID.
 
-### 5.1. Funkcja `getProfiles`
+### Funkcja `getProfiles`
 
 Zwraca listę wszystkich profili użytkownika na podstawie przekazanego `userId`.
 
@@ -440,7 +468,7 @@ Obsługuje błędy podczas pobierania profili.
 
 ---
 
-### 5.2. Funkcja `getProfileById`
+### Funkcja `getProfileById`
 
 Zwraca pojedynczy profil użytkownika na podstawie przekazanych `userId` i `profileId`.
 
@@ -488,11 +516,11 @@ Obsługuje błędy podczas pobierania profilu.
 
 ---
 
-## 6. Moduł `stores.js`
+## Moduł `stores.js`
 
 Moduł `stores.js` odpowiada za zarządzanie sklepami w bazie danych Firestore. Umożliwia pobieranie listy sklepów, pobieranie sklepu po ID lub nazwie oraz dodawanie nowych sklepów (w tym losowych).
 
-### 6.1. Funkcja `getStores`
+### Funkcja `getStores`
 
 Zwraca listę wszystkich sklepów zapisanych w kolekcji `stores`.
 
@@ -524,7 +552,7 @@ Obsługuje błędy podczas pobierania sklepów.
 
 ---
 
-### 6.2. Funkcja `getStoreById`
+### Funkcja `getStoreById`
 
 Zwraca pojedynczy sklep na podstawie przekazanego ID.
 
@@ -565,7 +593,7 @@ Obsługuje błędy podczas pobierania sklepu.
 
 ---
 
-### 6.3. Funkcja `getStoreByName`
+### Funkcja `getStoreByName`
 
 Zwraca sklep lub sklepy na podstawie przekazanej nazwy.
 
@@ -602,7 +630,7 @@ Obsługuje błędy podczas pobierania sklepów.
 
 ---
 
-### 6.4. Funkcja `createStore`
+### Funkcja `createStore`
 
 Dodaje nowy sklep do kolekcji `stores` na podstawie danych przesłanych w body żądania.
 
@@ -637,7 +665,7 @@ Obsługuje błędy podczas dodawania sklepu.
 
 ---
 
-## 7. Bezpieczeństwo i autoryzacja
+## Bezpieczeństwo i autoryzacja
 
 Wszystkie funkcje chmurowe w projekcie Unordered zostały zaprojektowane z uwzględnieniem bezpieczeństwa i kontroli dostępu. Poniżej opisano główne mechanizmy zabezpieczeń stosowane w funkcjach backendowych:
 

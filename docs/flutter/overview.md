@@ -1,57 +1,82 @@
 # Dokumentacja Frontend (Flutter)
 
-## 1. Wprowadzenie
+## Wprowadzenie
 
 Unordered-Mobile to aplikacja mobilna napisana w Flutterze, spełniająca funkcję frontendu dla aplikacji Unordered. Umożliwia użytkownikom tworzenie i zarządzanie boxami, przeglądanie historii zamówień, zarządzanie profilami odbiorców oraz korzystanie z powiadomień.
 
-## 2. Wymagania systemowe
+## Wymagania systemowe
 
-- Flutter SDK (>=3.5.3)
+- Flutter SDK
 - Dart (zalecana najnowsza wersja)
 - Android Studio lub Xcode (dla Android/iOS)
 - Konto Firebase z odpowiednią konfiguracją projektu
 
-## 3. Instalacja i uruchomienie
+## Instalacja i uruchomienie
 
 1. Przejdź do katalogu projektu.
 2. Zainstaluj zależności:  
    `flutter pub get`
-3. Skonfiguruj pliki środowiskowe Firebase komendą `flutterfire configure`
+3. Skonfiguruj pliki środowiskowe Firebase komendą:
+   `flutterfire configure`
 4. Uruchom aplikację na emulatorze lub urządzeniu fizycznym:  
    `flutter run`
 
-## 4. Struktura projektu
+## Struktura projektu
 
 Główne katalogi i pliki:
 
 - `lib/` – kod źródłowy aplikacji Flutter:
-  - `controllers/` – logika GetX, zarządzanie stanem i komunikacja z backendem
-  - `models/` – modele danych (boxy, profile, produkty, sklepy, zamówienia)
-  - `screens/` – ekrany aplikacji (kreator boxów, profile, historia, płatności, itp.)
-  - `widgets/` – komponenty UI wielokrotnego użytku
-  - `services/` – integracje z Firebase, OpenAI, płatnościami, itp.
-  - `utils/` – funkcje pomocnicze, walidacje, formatowanie
-- `assets/` – zasoby (grafiki, animacje, czcionki)
-- `android/`, `ios/` – konfiguracje platformowe
-- `pubspec.yaml` – zależności i konfiguracja zasobów
+  - `core/` – podstawowe klasy i funkcje
+  - `features/` – moduły funkcjonalne (np. boxy, profile, historia)
+    - `mystery_box_creator/` – kreator boxów
+    - `mystery_box_discover/` – przeglądanie boxów
+    - `user_center/` – zarządzanie profilami użytkowników
+    - `welcome_new_users/` – ekran powitalny dla nowych użytkowników
+  - `custom_navigation.dart` – niestandardowa nawigacja
+  - `main.dart` – punkt wejścia aplikacji
+  - `firebase_options.dart` – konfiguracja Firebase
 
-## 5. Główne zależności
+## Główne zależności
 
-- **Firebase** (core, auth, firestore, functions) – obsługa bazy danych, autoryzacji i funkcji chmurowych
-- **GetX, GetStorage, GetIt** – zarządzanie stanem, routing, dependency injection
-- **Dio, http, rxdart** – komunikacja HTTP, obsługa strumieni
-- **Google Fonts, Lottie, Shimmer, Table Calendar** – UI, animacje, kalendarze, czcionki
-- **InPost Pay SDK** – integracja płatności i dostaw (jeśli wdrożone)
+- **cupertino_icons** – zestaw ikon w stylu iOS
+- **decimal** – precyzyjna arytmetyka dziesiętna
+- **font_awesome_flutter** – ikony FontAwesome
+- **animate_do** – animacje UI
+- **google_maps_flutter** – integracja z Mapami Google
+- **intl** – obsługa dat i czasu, lokalizacja
+- **get** – zarządzanie stanem, routing
+- **get_storage** – lokalna baza danych
+- **get_it** – wstrzykiwanie zależności (dependency injection)
+- **dio** – zapytania HTTP
+- **firebase_core** – inicjalizacja Firebase
+- **firebase_auth** – uwierzytelnianie użytkowników
+- **cloud_firestore** – baza danych Firestore
+- **cloud_functions** – wywoływanie funkcji chmurowych Firebase
+- **http** – zapytania HTTP
+- **rxdart** – programowanie reaktywne, obsługa strumieni
+- **lottie** – animacje Lottie (gify)
+- **smooth_page_indicator** – wskaźniki stron (np. onboarding)
+- **google_fonts** – czcionki Google Fonts
+- **timeline_tile** – oś czasu w UI
+- **readmore** – rozwijane teksty
+- **table_calendar** – kalendarz w UI
+- **shimmer** – efekt ładowania shimmer
+- **photo_view** – powiększanie zdjęć
+- **google_nav_bar** – dolna nawigacja w stylu Google
 
-## 7. Opis funkcjonalności
+## Opis funkcjonalności (interfejsy użytkownika)
 
 - **Tworzenie mystery boxów (kreator):**  
-  Użytkownik może utworzyć box na podstawie profilu, budżetu i okazji lub wygenerować box losowy. Kreator prowadzi przez kolejne kroki wyboru.
+  Interfejs umożliwia użytkownikowi utworzenie boxa na podstawie profilu, budżetu i okazji lub wygenerowanie boxa losowego. Kreator prowadzi przez kolejne kroki wyboru.
 - **Zarządzanie profilami odbiorców:**  
-  Możliwość tworzenia, edycji i usuwania profili odbiorców boxów (np. rodzina, znajomi).
+  Interfejs pozwala na tworzenie, edycję i usuwanie profili odbiorców boxów (np. rodzina, znajomi).
 - **Historia zamówień i boxów:**  
-  Przeglądanie historii zamówień, szczegółów boxów i statusów realizacji.
+  Interfejs umożliwia przeglądanie historii zamówień, szczegółów boxów oraz statusów realizacji.
 - **Powiadomienia i promocje:**  
-  Otrzymywanie powiadomień o statusie zamówień, promocjach i nowościach.
+  Interfejs prezentuje powiadomienia o statusie zamówień, promocjach i nowościach.
+- **Zarządzanie kontem użytkownika:**  
+  Interfejs pozwala użytkownikowi na zarządzanie swoim kontem.
+
+Funkcjonalność oraz widoki poszczególnych modułów są opisane na stronie [Dokumentacja Widgetów Flutter](widgets.md).
 
 ---

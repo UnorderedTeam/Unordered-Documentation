@@ -41,19 +41,32 @@ czy bliskich, oferując im wyjątkowe, dopasowane prezenty bez zbędnego wysiłk
 
 ## Dokumentacja szczegółowa
 
-- [Frontend (Flutter)](flutter/overview.md)
-- [Backend (Cloud Functions)](gcloud/overview.md)
+- [Dokumentacja Frontend (Flutter)](flutter/overview.md)
+- [Dokumentacja Backend (Firebase)](gcloud/overview.md)
+- [Dokumentacja bazy danych (Firestore)](firestore/overview.md)
+
+---
+
+## Znane ograniczenia
+
+- Limity i koszty związane z wykorzystaniem API OpenAI (np. limity tokenów, opłaty za zapytania)
+- Limity Firestore (np. liczba dokumentów, limity odczytów/zapisów)
+- Brak pełnej automatyzacji zamówień fizycznych – aplikacja generuje propozycje, ale nie realizuje zamówień
+- Zależność od dostępności zewnętrznych platform zakupowych
+- Brak implementacji manualnego wyboru produktów przez użytkownika (na obecnym etapie)
 
 ---
 
 ## Roadmap i rozwój
 
-- Integracja z dodatkowymi platformami zakupowymi
-- Współpraca z markami i sklepami (dedykowane boxy)
-- System subskrypcji (cykliczne boxy)
-- Integracja z kalendarzami zewnętrznymi
-- Usprawnienie procesu zamawiania produktów
-- Rozszerzenie funkcjonalności AI
+- Integracja z dodatkowymi platformami zakupowymi (szerszy wybór produktów)
+- Współpraca z markami i sklepami (dedykowane boxy, oferty specjalne)
+- System subskrypcji (cykliczne boxy, automatyczne przypomnienia)
+- Integracja z kalendarzami zewnętrznymi (np. Google Calendar)
+- Usprawnienie procesu zamawiania produktów (np. automatyczne przekierowanie do sklepu)
+- Rozszerzenie funkcjonalności AI (lepsze dopasowanie prezentów do profilu)
+- Możliwość współpracy z influencerami i partnerami
+- Rozbudowa panelu administracyjnego i statystyk
 
 ---
 
