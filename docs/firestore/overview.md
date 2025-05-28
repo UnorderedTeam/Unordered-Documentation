@@ -88,7 +88,7 @@ Kolekcja użytkowników.
         - `plannedDate` – planowana data
         - `price` – cena boxa
         - `products` – lista dokumentów [`products`](#products)
-        - `profileId` – powiązany dokument [`profiles`](#profiles)
+        - `profileId` – powiązany dokument [`profiles`](#users)
 
   - **Podkolekcja: `liked`**
     - **Dokument:**
